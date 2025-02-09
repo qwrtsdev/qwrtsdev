@@ -15,7 +15,7 @@ A student majoring in Information Technology at Hatyai Technical College, passio
 - **Graphic:** 5+ years of experience in Graphic Designing and Video Editing, with a personal YouTube channel.
 - **Internship:** I'm currently a Software Development Intern at Toyota Phithan Hatyai.
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,php,js,ts,nodejs,bun,react,nextjs,discordjs,electron,tauri,firebase,mysql,sqlite,md,ps,ai,pr,figma,npm,postman,git,github,vercel,vscode,visualstudio&perline=10)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,php,js,nodejs,react,nextjs,discordjs,firebase,mysql,sqlite,md,ps,ai,pr,figma,npm,postman,git,github,vercel,vscode,visualstudio&perline=10)](https://skillicons.dev)
 
 ---
 
