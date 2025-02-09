@@ -5,10 +5,10 @@ import { MessageSquareMore, Github, Globe } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="h-[100dvh]">
-      <Aurora />
+    <main className="h-[100dvh] flex justify-center items-center">
+      <Aurora className="h-full"/>
       
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute z-10">
         <div className="flex flex-col p-8 rounded-lg border-zinc-500 border border-opacity-50 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-2xl bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
           <div className="relative w-full h-8 mb-8">
             <Image 
