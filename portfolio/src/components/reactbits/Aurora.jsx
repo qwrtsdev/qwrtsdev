@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 import { useEffect, useRef } from "react";
@@ -116,82 +116,83 @@ void main() {
 `;
 
 export default function Aurora(props) {
-  const { colorStops = ["#4d4d4d", "#8f8f8f", "#fafafa"], amplitude = 1.0 } =
-    props;
+    const { colorStops = ["#3A29FF", "#FF94B4", "#FF3232"], amplitude = 1.0 } =
+        props;
 
-  const propsRef = useRef(props);
-  propsRef.current = props;
+    const propsRef = useRef(props);
+    propsRef.current = props;
 
-  const ctnDom = useRef(null);
+    const ctnDom = useRef(null);
 
-  useEffect(() => {
-    const ctn = ctnDom.current;
-    if (!ctn) return;
+    useEffect(() => {
+        const ctn = ctnDom.current;
+        if (!ctn) return;
 
-    const renderer = new Renderer();
-    const gl = renderer.gl;
-    gl.clearColor(1, 1, 1, 1);
+        const renderer = new Renderer();
+        const gl = renderer.gl;
+        gl.clearColor(0.035, 0.035, 0.043, 1); // #09090b in normalized RGB
 
-    function resize() {
-      if (!ctn) return;
-      renderer.setSize(ctn.offsetWidth, ctn.offsetHeight);
-    }
-    window.addEventListener("resize", resize);
-    resize();
+        function resize() {
+            if (!ctn) return;
+            renderer.setSize(ctn.offsetWidth, ctn.offsetHeight);
+        }
+        window.addEventListener("resize", resize);
+        resize();
 
-    const geometry = new Triangle(gl);
-    geometry.addAttribute("uv", {
-      size: 2,
-      data: new Float32Array([0, 0, 2, 0, 0, 2]),
-    });
+        const geometry = new Triangle(gl);
+        geometry.addAttribute("uv", {
+            size: 2,
+            data: new Float32Array([0, 0, 2, 0, 0, 2]),
+        });
 
-    const colorStopsArray = colorStops.map((hex) => {
-      const c = new Color(hex);
-      return [c.r, c.g, c.b];
-    });
+        const colorStopsArray = colorStops.map((hex) => {
+            const c = new Color(hex);
+            return [c.r, c.g, c.b];
+        });
 
-    const program = new Program(gl, {
-      vertex: VERT,
-      fragment: FRAG,
-      uniforms: {
-        uTime: { value: 0 },
-        uAmplitude: { value: amplitude },
-        uColorStops: { value: colorStopsArray },
-      },
-    });
+        const program = new Program(gl, {
+            vertex: VERT,
+            fragment: FRAG,
+            uniforms: {
+                uTime: { value: 0 },
+                uAmplitude: { value: amplitude },
+                uColorStops: { value: colorStopsArray },
+            },
+        });
 
-    const mesh = new Mesh(gl, { geometry, program });
-    ctn.appendChild(gl.canvas);
+        const mesh = new Mesh(gl, { geometry, program });
+        ctn.appendChild(gl.canvas);
 
-    let animateId = 0;
+        let animateId = 0;
 
-    const update = (t) => {
-      animateId = requestAnimationFrame(update);
+        const update = (t) => {
+            animateId = requestAnimationFrame(update);
 
-      const { time = t * 0.01, speed = 1.0 } = propsRef.current;
-      program.uniforms.uTime.value = time * speed * 0.1;
+            const { time = t * 0.01, speed = 1.0 } = propsRef.current;
+            program.uniforms.uTime.value = time * speed * 0.1;
 
-      program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0;
-      const stops = propsRef.current.colorStops ?? colorStops;
-      program.uniforms.uColorStops.value = stops.map((hex) => {
-        const c = new Color(hex);
-        return [c.r, c.g, c.b];
-      });
+            program.uniforms.uAmplitude.value =
+                propsRef.current.amplitude ?? 1.0;
+            const stops = propsRef.current.colorStops ?? colorStops;
+            program.uniforms.uColorStops.value = stops.map((hex) => {
+                const c = new Color(hex);
+                return [c.r, c.g, c.b];
+            });
 
-      renderer.render({ scene: mesh });
-    };
-    animateId = requestAnimationFrame(update);
+            renderer.render({ scene: mesh });
+        };
+        animateId = requestAnimationFrame(update);
 
-    return () => {
-      cancelAnimationFrame(animateId);
-      window.removeEventListener("resize", resize);
+        return () => {
+            cancelAnimationFrame(animateId);
+            window.removeEventListener("resize", resize);
 
-      ctn?.removeChild(gl.canvas);
+            ctn?.removeChild(gl.canvas);
 
-      gl.getExtension("WEBGL_lose_context")?.loseContext();
-    };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [amplitude, colorStops]);
+            gl.getExtension("WEBGL_lose_context")?.loseContext();
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [amplitude, colorStops]);
 
-  return <div ref={ctnDom} className="w-full h-full" />;
+    return <div ref={ctnDom} className="h-full w-full" />;
 }
