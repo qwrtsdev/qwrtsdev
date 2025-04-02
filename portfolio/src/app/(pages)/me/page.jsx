@@ -5,7 +5,7 @@ export const metadata = {
 export default function Home() {
     return (
         <main className="flex min-h-screen items-center justify-center bg-zinc-900 text-white">
-            <p>the site is underconstruction.</p>
+            <p>หน้านี้อยู่ในระหว่างการปรับปรุง โปรดรอ</p>
         </main>
     );
 }
