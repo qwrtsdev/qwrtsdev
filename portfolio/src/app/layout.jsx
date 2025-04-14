@@ -18,17 +18,17 @@ const LineSeed = localFont({
 
 export const metadata = {
     title: {
-        default: "QWRTSDEV",
-        template: "%s | QWRTSDEV",
+        default: "QWRTS",
+        template: "%s | QWRTS",
     },
     description:
         "A passionate programmer and graphic designer. Who wants to create well-crafted softwares that seamlessly blends functionality with aesthetics.",
     openGraph: {
-        title: "QWRTSDEV",
+        title: "QWRTS",
         description:
             "A passionate programmer and graphic designer. Who wants to create well-crafted softwares that seamlessly blends functionality with aesthetics.",
-        url: "https://qwrtsdev.vercel.app/",
-        siteName: "QWRTSDEV",
+        url: "https://qwrtsdev.xyz/",
+        siteName: "QWRTS",
         images: [
             {
                 url: "https://cdn.discordapp.com/attachments/1297492873398452267/1337792308757794907/qw-opengraph.png?ex=67ee9b2d&is=67ed49ad&hm=642986e7b228cf708dbb8a8dbe5374887d893bc9f122f626656043469ea3f8de&",
@@ -40,8 +40,8 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        domain: "qwrtsdev.vercel.app",
-        title: "QWRTSDEV",
+        domain: "qwrtsdev.xyz",
+        title: "QWRTS",
         description:
             "A passionate programmer and graphic designer. Who wants to create well-crafted softwares that seamlessly blends functionality with aesthetics.",
         image: "https://cdn.discordapp.com/attachments/1297492873398452267/1337792308757794907/qw-opengraph.png?ex=67ee9b2d&is=67ed49ad&hm=642986e7b228cf708dbb8a8dbe5374887d893bc9f122f626656043469ea3f8de&",

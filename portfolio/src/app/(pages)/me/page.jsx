@@ -1,11 +1,86 @@
+import GetFullYear from "@/components/global/GetFullYear";
+import { NumberTicker } from "@/components/magicui/number-ticker";
+import getDayCount from "@/utils/BirthDate";
+
 export const metadata = {
-    title: "หารูมเมท",
+    title: "เกี่ยวกับฉัน",
 };
 
 export default function Home() {
+    const birthDate = getDayCount();
+    const girlfriend = 0;
+
     return (
-        <main className="flex min-h-screen items-center justify-center bg-zinc-900 text-white">
-            <p>หน้านี้อยู่ในระหว่างการปรับปรุง โปรดรอ</p>
+        <main className="h-full items-center justify-center bg-zinc-50">
+            <div className="flex w-full items-center justify-center">
+                {/* Container */}
+                <div className="w-full max-w-4xl border-l border-r border-zinc-300">
+                    <div className="justify-center py-12 text-center">
+                        <div className="text-zinc-900">
+                            <p className="">Lorem ipsum dolor sit amet.</p>
+                            <p className="">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-3 grid-rows-1 border-t border-zinc-300">
+                        <div className="space-y-2 p-4 text-center font-bold">
+                            <p>มีชีวิตมาแล้ว</p>
+                            <p className="text-6xl">
+                                <NumberTicker value={birthDate} />
+                            </p>
+                            <p>วัน</p>
+                        </div>
+
+                        <div className="space-y-2 border-x border-zinc-300 p-4 text-center font-bold">
+                            <p>มีแฟนตอนนี้</p>
+                            <p className="text-6xl">
+                                <NumberTicker value={girlfriend} />
+                            </p>
+                            <p>
+                                คน
+                                <img
+                                    alt="อยากจะร้องไห้"
+                                    width="18"
+                                    height="18"
+                                    src="/cry.png"
+                                    className="ml-1 inline-block items-center"
+                                />
+                            </p>
+                        </div>
+
+                        <div className="space-y-2 p-4 text-center font-bold">
+                            <p>พยายามไม่คิดถึงเธอ</p>
+                            <p className="text-6xl">
+                                <NumberTicker value={1096} />
+                            </p>
+                            <p>วัน</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer className="border-t border-zinc-300">
+                <div className="flex items-center justify-center py-5 text-center text-xs text-zinc-600">
+                    © <GetFullYear /> qwrtsdev. All rights reserved.
+                    <a
+                        href="https://webring.wonderful.software/#qwrtsdev.xyz"
+                        title="วงแหวนเว็บ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            alt="วงแหวนเว็บ"
+                            width="18"
+                            height="18"
+                            src="https://webring.wonderful.software/webring.black.svg"
+                            className="ml-2 transition-transform duration-200 hover:rotate-12 hover:scale-125"
+                        />
+                    </a>
+                </div>
+            </footer>
         </main>
     );
 }
