@@ -12,20 +12,27 @@ export default function Home() {
 
     return (
         <main className="h-full items-center justify-center bg-zinc-50">
-            <div className="flex w-full items-center justify-center">
+            <div className="4xl:px-0 flex w-full items-center justify-center px-4">
                 {/* Container */}
                 <div className="w-full max-w-4xl border-l border-r border-zinc-300">
-                    <div className="justify-center py-12 text-center">
-                        <div className="text-zinc-900">
-                            <p className="">Lorem ipsum dolor sit amet.</p>
-                            <p className="">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit.
-                            </p>
+                    <div className="justify-center py-12">
+                        <div className="flex flex-col items-center justify-center gap-6 text-left text-zinc-900">
+                            <span>
+                                <p className="">Lorem ipsum dolor sit amet.</p>
+                                <p className="">
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </span>
+
+                            <span>
+                                <p>Nuttapong Nakawirot</p>
+                                <p></p>
+                            </span>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 grid-rows-1 border-t border-zinc-300">
+                    <div className="grid grid-cols-1 grid-rows-3 border-t border-zinc-300 lg:grid-cols-3 lg:grid-rows-1">
                         <div className="space-y-2 p-4 text-center font-bold">
                             <p>มีชีวิตมาแล้ว</p>
                             <p className="text-6xl">
@@ -34,7 +41,7 @@ export default function Home() {
                             <p>วัน</p>
                         </div>
 
-                        <div className="space-y-2 border-x border-zinc-300 p-4 text-center font-bold">
+                        <div className="space-y-2 border-x border-y border-zinc-300 p-4 text-center font-bold lg:border-y-0">
                             <p>มีแฟนตอนนี้</p>
                             <p className="text-6xl">
                                 <NumberTicker value={girlfriend} />
@@ -56,7 +63,22 @@ export default function Home() {
                             <p className="text-6xl">
                                 <NumberTicker value={1096} />
                             </p>
-                            <p>วัน</p>
+                            <p>ครั้ง</p>
+                        </div>
+                    </div>
+
+                    <div className="">
+                        <div className=""></div>
+
+                        <div className="">
+                            <ol>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ol>
                         </div>
                     </div>
                 </div>
