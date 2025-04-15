@@ -1,4 +1,3 @@
-import GetFullYear from "@/components/global/GetFullYear";
 import { Marquee } from "@/components/magicui/marquee";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import getDayCount from "@/utils/BirthDate";
@@ -84,7 +83,7 @@ export default function Home() {
                     {/* Showcases */}
                     <div className=""></div>
 
-                    {/* Connect */}
+                    {/* Connection */}
                     <div className="border-t border-zinc-300">
                         <Marquee repeat={3} className="font-bold text-zinc-300">
                             <span>connect with me </span>
@@ -130,7 +129,7 @@ export default function Home() {
 
                             <a
                                 href="https://www.instagram.com/sillyqwrts"
-                                title="Instragram"
+                                title="Instagram"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -195,7 +194,7 @@ export default function Home() {
                             >
                                 <img
                                     src="/fastwork-logo.svg"
-                                    alt="LinkedIn's Icon"
+                                    alt="Fastwork's Icon"
                                     width="180"
                                     height="180"
                                     className="transition-transform duration-200 hover:scale-105"

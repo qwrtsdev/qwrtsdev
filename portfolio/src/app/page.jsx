@@ -70,6 +70,17 @@ export default function Home() {
                                 />
                             </Link>
                         </div>
+                        <div className="">
+                            <a
+                                href="https://qwrtsdev.xyz/me"
+                                title="About Me"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xs text-zinc-50 hover:underline"
+                            >
+                                เกี่ยวกับฉัน (beta)
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
