@@ -11,10 +11,10 @@ export default function Home() {
     const girlfriend = 0;
 
     return (
-        <main className="h-full items-center justify-center bg-zinc-50">
+        <main className="h-full items-center justify-center bg-zinc-50 text-zinc-900">
             <div className="4xl:px-0 flex w-full items-center justify-center px-4">
-                {/* Container */}
                 <div className="w-full max-w-4xl border-l border-r border-zinc-300">
+                    {/* Hero */}
                     <div className="justify-center py-12">
                         <div className="flex flex-col items-center justify-center gap-6 text-left text-zinc-900">
                             <span>
@@ -32,6 +32,10 @@ export default function Home() {
                         </div>
                     </div>
 
+                    {/* About Me */}
+                    <div className=""></div>
+
+                    {/* Stats */}
                     <div className="grid grid-cols-1 grid-rows-3 border-t border-zinc-300 lg:grid-cols-3 lg:grid-rows-1">
                         <div className="space-y-2 p-4 text-center font-bold">
                             <p>มีชีวิตมาแล้ว</p>
@@ -41,7 +45,7 @@ export default function Home() {
                             <p>วัน</p>
                         </div>
 
-                        <div className="space-y-2 border-x border-y border-zinc-300 p-4 text-center font-bold lg:border-y-0">
+                        <div className="space-y-2 border-x-0 border-y border-zinc-300 p-4 text-center font-bold lg:border-x lg:border-y-0">
                             <p>มีแฟนตอนนี้</p>
                             <p className="text-6xl">
                                 <NumberTicker value={girlfriend} />
@@ -67,19 +71,16 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="">
-                        <div className=""></div>
+                    {/* Showcases */}
+                    <div className=""></div>
 
-                        <div className="">
-                            <ol>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ol>
-                        </div>
+                    {/* Tastes */}
+                    <div className=""></div>
+
+                    {/* Tie-In */}
+                    <div className="items-center justify-center border-t border-zinc-300 py-12 text-center">
+                        <p className="text-3xl font-bold">อยากได้เว็บแบบนี้</p>
+                        <p className="text-7xl font-black">บ้างเหรอ?</p>
                     </div>
                 </div>
             </div>
