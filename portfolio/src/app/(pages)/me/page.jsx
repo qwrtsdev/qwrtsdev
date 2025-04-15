@@ -1,3 +1,4 @@
+import GetFullYear from "@/components/global/GetFullYear";
 import { Marquee } from "@/components/magicui/marquee";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import getDayCount from "@/utils/BirthDate";
