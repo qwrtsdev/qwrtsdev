@@ -78,7 +78,7 @@ export default function Home() {
                                 rel="noopener noreferrer"
                                 className="text-xs text-zinc-50 hover:underline"
                             >
-                                เกี่ยวกับฉัน (beta)
+                                เกี่ยวกับฉัน &#40;beta&#41;
                             </a>
                         </div>
                     </div>
