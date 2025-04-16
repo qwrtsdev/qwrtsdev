@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const LineSeed = localFont({
     src: [
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
                 <div className="scrollbar-hide h-full w-full overflow-auto">
                     {children}
                     <SpeedInsights />
+                    <Analytics />
                 </div>
             </body>
         </html>
