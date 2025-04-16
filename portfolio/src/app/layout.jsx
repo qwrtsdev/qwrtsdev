@@ -57,6 +57,7 @@ export default function RootLayout({ children }) {
             >
                 <div className="scrollbar-hide h-full w-full overflow-auto">
                     {children}
+                    <SpeedInsights />
                 </div>
             </body>
         </html>

@@ -1,4 +1,5 @@
 import GetFullYear from "@/components/global/GetFullYear";
+import Card from "@/components/global/Card";
 import { Marquee } from "@/components/magicui/marquee";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import getDayCount from "@/utils/BirthDate";
@@ -82,7 +83,39 @@ export default function Home() {
                     </div>
 
                     {/* Showcases */}
-                    <div className=""></div>
+                    <div className="border-t border-zinc-300">
+                        <p className="py-4 text-center font-bold text-zinc-900">
+                            ประสบการณ์ที่ผ่านมา
+                        </p>
+
+                        <div className="grid grid-cols-1 grid-rows-3 gap-4 px-4 lg:grid-cols-3 lg:grid-rows-1">
+                            <Card
+                                thumbnail="/sunnyhellgate-project.jpg"
+                                title="หนุ่มทรงSAD แห่งดินแดนDiscord #เดี่ยวซันสั้น"
+                                link="https://youtu.be/wByxPzKhJt8"
+                                featured={true}
+                                tags={["Video Editor"]}
+                            />
+
+                            <Card
+                                thumbnail="/toyotapithan.jpg"
+                                title="Toyota Pithan Hatyai"
+                                link="https://g.co/kgs/du2FsNL"
+                                tags={["IT / Programmer (Intern)"]}
+                            />
+
+                            <Card
+                                thumbnail="/ywc20.jpg"
+                                title="Young Webmaster Camp 20"
+                                link=""
+                                tags={["Paticipant"]}
+                            />
+                        </div>
+
+                        <p className="py-4 text-center text-sm text-zinc-900">
+                            และอื่นๆอีกมากมาย...
+                        </p>
+                    </div>
 
                     {/* Connection */}
                     <div className="border-t border-zinc-300">
