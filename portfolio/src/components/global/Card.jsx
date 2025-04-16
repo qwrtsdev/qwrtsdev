@@ -1,9 +1,7 @@
-"client";
-
 import { AspectRatio } from "../ui/aspect-ratio";
 import Image from "next/image";
 
-export default function GridItems({ thumbnail, title, link, featured, tags }) {
+export default function Card({ thumbnail, title, link, featured, tags }) {
     const Wrapper = link ? "a" : "div";
 
     return (
@@ -22,7 +20,7 @@ export default function GridItems({ thumbnail, title, link, featured, tags }) {
 
                 <Image
                     src={thumbnail || null}
-                    alt={title || "N/A"}
+                    alt={title || "default thumbnail"}
                     sizes="100vw"
                     layout="fill"
                     objectFit="cover"
