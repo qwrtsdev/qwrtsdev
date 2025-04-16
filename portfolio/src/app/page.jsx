@@ -1,89 +1,259 @@
-import Aurora from "@/components/reactbits/Aurora";
-import Image from "next/image";
-import Link from "next/link";
-import { MessageSquareMore, Github, Globe } from "lucide-react";
+import GetFullYear from "@/components/global/GetFullYear";
+import Card from "@/components/global/Card";
+import { Marquee } from "@/components/magicui/marquee";
+import { NumberTicker } from "@/components/magicui/number-ticker";
+import getDayCount from "@/utils/BirthDate";
 
 export default function Home() {
-    return (
-        <main className="flex h-[100dvh] items-center justify-center">
-            <Aurora
-                colorStops={["#8a8a8a", "#292929", "#525252"]}
-                blend={0.5}
-                amplitude={1.0}
-                speed={1}
-                className="h-full"
-            />
+    const birthDate = getDayCount();
+    const girlfriend = 0;
 
-            <div className="absolute z-10">
-                <div className="flex flex-col rounded-lg border border-zinc-500 border-opacity-50 bg-gray-500 bg-opacity-0 bg-clip-padding p-8 backdrop-blur-2xl backdrop-contrast-100 backdrop-saturate-100 backdrop-filter">
-                    <div className="relative mb-8 h-8 w-full">
-                        <Image
-                            src={"/qw-cropped-white.png"}
-                            alt={"qwrtsdev_logo"}
-                            sizes="100vw"
-                            layout="fill"
-                            objectFit="contain"
-                            priority={true}
-                            className=""
-                        />
+    return (
+        <main className="h-full items-center justify-center bg-zinc-50 text-zinc-900">
+            <div className="4xl:px-0 flex w-full items-center justify-center px-4">
+                <div className="w-full max-w-4xl border-l border-r border-zinc-300">
+                    {/* Hero */}
+                    <div className="justify-center py-12">
+                        <div className="flex flex-col items-center justify-center gap-6 text-left text-zinc-900">
+                            <span>
+                                <p className="">Lorem ipsum dolor sit amet.</p>
+                                <p className="">
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </span>
+
+                            <span>
+                                <p>Nuttapong Nakawirot</p>
+                                <p></p>
+                            </span>
+                        </div>
                     </div>
-                    <div className="flex flex-col items-center justify-center gap-8">
-                        <div className="text-center text-xs font-thin text-zinc-100">
-                            <p>you're here. thanks for visiting.</p>
-                            <p>but there's nothing for you. maybe later?</p>
+
+                    {/* About Me */}
+                    <div className=""></div>
+
+                    {/* Stats */}
+                    <div className="grid grid-cols-1 grid-rows-3 border-t border-zinc-300 lg:grid-cols-3 lg:grid-rows-1">
+                        <div className="space-y-2 p-4 text-center font-bold">
+                            <p>มีชีวิตมาแล้ว</p>
+                            <p className="text-6xl">
+                                <NumberTicker
+                                    value={birthDate}
+                                    className="text-zinc-900"
+                                />
+                            </p>
+                            <p>วัน</p>
                         </div>
-                        <div className="flex flex-row gap-3 text-center">
-                            <Link
-                                href="https://discord.gg/JKsYSd4TVf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <MessageSquareMore
-                                    color="#f4f4f5"
-                                    size={18}
-                                    strokeWidth={1.25}
-                                    className="inline"
+
+                        <div className="space-y-2 border-x-0 border-y border-zinc-300 p-4 text-center font-bold lg:border-x lg:border-y-0">
+                            <p>มีแฟนตอนนี้</p>
+                            <p className="text-6xl">
+                                <NumberTicker
+                                    value={girlfriend}
+                                    className="text-zinc-900"
                                 />
-                            </Link>
-                            <Link
-                                href="https://github.com/qwrtsdev"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Github
-                                    color="#f4f4f5"
-                                    size={18}
-                                    strokeWidth={1.25}
-                                    className="inline"
+                            </p>
+                            <p>
+                                คน
+                                <img
+                                    alt="อยากจะร้องไห้"
+                                    width="18"
+                                    height="18"
+                                    src="/cry.png"
+                                    className="ml-1 inline-block items-center"
                                 />
-                            </Link>
-                            <Link
-                                href="https://linktr.ee/qwrts"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Globe
-                                    color="#f4f4f5"
-                                    size={18}
-                                    strokeWidth={1.25}
-                                    className="inline"
-                                />
-                            </Link>
+                            </p>
                         </div>
+
+                        <div className="space-y-2 p-4 text-center font-bold">
+                            <p>พยายามไม่คิดถึงเธอ</p>
+                            <p className="text-6xl">
+                                <NumberTicker
+                                    value={1096}
+                                    className="text-zinc-900"
+                                />
+                            </p>
+                            <p>ครั้ง</p>
+                        </div>
+                    </div>
+
+                    {/* Showcases */}
+                    <div className="border-t border-zinc-300">
+                        <p className="py-4 text-center font-bold text-zinc-900">
+                            ประสบการณ์ที่ผ่านมา
+                        </p>
+
+                        <div className="grid grid-cols-1 grid-rows-3 gap-4 px-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
+                            <Card
+                                thumbnail="/sunnyhellgate-project.jpg"
+                                title="หนุ่มทรงSAD แห่งดินแดนDiscord #เดี่ยวซันสั้น"
+                                link="https://youtu.be/wByxPzKhJt8"
+                                featured={true}
+                                tags={["Video Editor"]}
+                            />
+
+                            <Card
+                                thumbnail="/toyotapithan.jpg"
+                                title="Toyota Pithan Hatyai"
+                                link="https://g.co/kgs/du2FsNL"
+                                tags={["IT / Programmer (Intern)"]}
+                            />
+
+                            <Card
+                                thumbnail="/ywc20.jpg"
+                                title="Young Webmaster Camp 20"
+                                link=""
+                                tags={["(Potentially) Paticipant"]}
+                            />
+                        </div>
+
+                        <p className="py-4 text-center text-sm text-zinc-900">
+                            และอื่นๆอีกมากมาย...
+                        </p>
+                    </div>
+
+                    {/* Connection */}
+                    <div className="border-t border-zinc-300">
+                        <Marquee repeat={3} className="font-bold text-zinc-300">
+                            <span>connect with me </span>
+                            <span>เชื่อมต่อกับฉัน </span>
+                            <span>connect with me </span>
+                            <span>เชื่อมต่อกับฉัน </span>
+                            <span>connect with me </span>
+                            <span>เชื่อมต่อกับฉัน </span>
+                            <span>connect with me </span>
+                            <span>เชื่อมต่อกับฉัน </span>
+                        </Marquee>
+
+                        <div className="flex flex-wrap items-center justify-center gap-4 py-4">
+                            <a
+                                href="https://discordapp.com/users/824442267318222879/"
+                                title="Discord"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="/discord-icon.svg"
+                                    alt="Discord's Icon"
+                                    width="46"
+                                    height="46"
+                                    className="transition-transform duration-200 hover:scale-110"
+                                />
+                            </a>
+
+                            <a
+                                href="https://www.facebook.com/dumbqwrts"
+                                title="Facebook"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="/facebook-icon.svg"
+                                    alt="Facebook's Icon"
+                                    width="46"
+                                    height="46"
+                                    className="transition-transform duration-200 hover:scale-110"
+                                />
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/sillyqwrts"
+                                title="Instagram"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="/instagram-icon.svg"
+                                    alt="Instragram's Icon"
+                                    width="46"
+                                    height="46"
+                                    className="transition-transform duration-200 hover:scale-110"
+                                />
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/sillyqwrts"
+                                title="LinkedIn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="/linkedin-icon.svg"
+                                    alt="LinkedIn's Icon"
+                                    width="46"
+                                    height="46"
+                                    className="transition-transform duration-200 hover:scale-110"
+                                />
+                            </a>
+                        </div>
+
+                        <Marquee
+                            repeat={3}
+                            reverse={true}
+                            className="font-bold text-zinc-300"
+                        >
+                            <span>connect with me </span>
+                            <span>เชื่อมต่อกับฉัน </span>
+                            <span>connect with me </span>
+                            <span>เชื่อมต่อกับฉัน </span>
+                            <span>connect with me </span>
+                            <span>เชื่อมต่อกับฉัน </span>
+                            <span>connect with me </span>
+                            <span>เชื่อมต่อกับฉัน </span>
+                        </Marquee>
+                    </div>
+
+                    {/* Tastes */}
+                    <div className=""></div>
+
+                    {/* Tie-In */}
+                    <div className="flex flex-col items-center justify-center gap-8 border-t border-zinc-300 py-12 text-center">
+                        <div className="">
+                            <p className="text-3xl font-bold">
+                                อยากได้เว็บแบบนี้
+                            </p>
+                            <p className="text-7xl font-black">บ้างเหรอ?</p>
+                        </div>
+
                         <div className="">
                             <a
-                                href="https://qwrtsdev.xyz/me"
-                                title="About Me"
+                                href="https://fastwork.co/user/qwrtsdev"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xs text-zinc-50 hover:underline"
                             >
-                                เกี่ยวกับฉัน &#40;beta&#41;
+                                <img
+                                    src="/fastwork-logo.svg"
+                                    alt="Fastwork's Icon"
+                                    width="180"
+                                    height="180"
+                                    className="transition-transform duration-200 hover:scale-105"
+                                />
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <footer className="border-t border-zinc-300">
+                <div className="flex items-center justify-center py-5 text-center text-xs text-zinc-600">
+                    © <GetFullYear /> qwrtsdev. All rights reserved.
+                    <a
+                        href="https://webring.wonderful.software/#qwrtsdev.xyz"
+                        title="วงแหวนเว็บ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            alt="วงแหวนเว็บ"
+                            width="18"
+                            height="18"
+                            src="https://webring.wonderful.software/webring.black.svg"
+                            className="ml-2 transition-transform duration-200 hover:rotate-12 hover:scale-125"
+                        />
+                    </a>
+                </div>
+            </footer>
         </main>
     );
 }

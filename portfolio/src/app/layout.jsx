@@ -19,8 +19,8 @@ const LineSeed = localFont({
 
 export const metadata = {
     title: {
-        default: "QWRTS",
-        template: "%s | QWRTS",
+        default: "QWRTSDEV",
+        template: "%s | QWRTSDEV",
     },
     description:
         "A passionate programmer and graphic designer. Who wants to create well-crafted softwares that seamlessly blends functionality with aesthetics.",
@@ -29,7 +29,7 @@ export const metadata = {
         description:
             "A passionate programmer and graphic designer. Who wants to create well-crafted softwares that seamlessly blends functionality with aesthetics.",
         url: "https://qwrtsdev.xyz/",
-        siteName: "QWRTS",
+        siteName: "Nuttapong Nakawirot",
         images: [
             {
                 url: "https://cdn.discordapp.com/attachments/1297492873398452267/1337792308757794907/qw-opengraph.png?ex=67ee9b2d&is=67ed49ad&hm=642986e7b228cf708dbb8a8dbe5374887d893bc9f122f626656043469ea3f8de&",
