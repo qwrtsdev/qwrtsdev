@@ -287,14 +287,14 @@ export default function Home() {
                             reverse={true}
                             className="font-bold text-zinc-300"
                         >
-                            <span>connect with me </span>
-                            <span>เชื่อมต่อกับฉัน </span>
-                            <span>connect with me </span>
-                            <span>เชื่อมต่อกับฉัน </span>
-                            <span>connect with me </span>
-                            <span>เชื่อมต่อกับฉัน </span>
-                            <span>connect with me </span>
-                            <span>เชื่อมต่อกับฉัน </span>
+                            <span>let's connect </span>
+                            <span>มาเชื่อมต่อกันเถอะ </span>
+                            <span>let's connect </span>
+                            <span>มาเชื่อมต่อกันเถอะ </span>
+                            <span>let's connect </span>
+                            <span>มาเชื่อมต่อกันเถอะ </span>
+                            <span>let's connect </span>
+                            <span>มาเชื่อมต่อกันเถอะ </span>
                         </Marquee>
                     </div>
 
