@@ -6,7 +6,7 @@ A student majoring in Information Technology at Hatyai Technical College, passio
 
 💡 Junior Front-end Developer<br/>
 📍 Songkhla, Thailand<br/>
-💻 Currently freelance at [@fastwork](https://fastwork.co/user/qwrtsdev)
+💻 Currently unemployed :(
 
 ---
 
