@@ -1,16 +1,20 @@
-import GetFullYear from "@/components/global/GetFullYear";
 import Card from "@/components/global/Card";
 import { Marquee } from "@/components/magicui/marquee";
 import { NumberTicker } from "@/components/magicui/number-ticker";
-import getDayCount from "@/utils/BirthDate";
+import { getDayCount, getFullYear } from "@/utils/dates";
 import Badge from "@/components/global/Badge";
 import { ScratchToReveal } from "@/components/magicui/scratch-to-reveal";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import Image from "next/image";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import Footer from "@/components/global/Footer";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
-    const birthDate = getDayCount();
+    const dayCount = getDayCount();
     const girlfriend = 0;
+    const yearOld = getFullYear() - 2004;
 
     return (
         <main className="h-full items-center justify-center bg-zinc-50 text-zinc-900">
@@ -22,13 +26,31 @@ export default function Home() {
                             <Image
                                 src="/qw-cropped-up.png"
                                 alt="Profile Image"
-                                width={50}
-                                height={50}
+                                width={40}
+                                height={40}
                             />
 
-                            <h1 className="text-6xl font-black md:text-8xl">
-                                Nuttapong Nakawirot
-                            </h1>
+                            <div className="">
+                                <TextAnimate
+                                    animation="blurInUp"
+                                    by="character"
+                                    as="h1"
+                                    className="text-wrap text-5xl font-black md:text-8xl"
+                                    once
+                                >
+                                    NUTTAPONG
+                                </TextAnimate>
+
+                                <TextAnimate
+                                    animation="blurInUp"
+                                    by="character"
+                                    as="h1"
+                                    className="text-wrap text-5xl font-black md:text-8xl"
+                                    once
+                                >
+                                    NAKAWIROT
+                                </TextAnimate>
+                            </div>
 
                             <div className="flex flex-wrap gap-2">
                                 <Badge text="Developer" />
@@ -54,7 +76,7 @@ export default function Home() {
                             >
                                 <AspectRatio ratio={1 / 1} className="w-full">
                                     <Image
-                                        src="/profile.jpg"
+                                        src="/images/profile.jpg"
                                         alt="Profile Image"
                                         width={500}
                                         height={500}
@@ -64,7 +86,7 @@ export default function Home() {
                             </ScratchToReveal>
 
                             <p className="text-center text-xs font-thin text-zinc-900">
-                                ขูดเพื่อดูรูปเต็ม
+                                this ugly mf
                             </p>
                         </div>
 
@@ -73,8 +95,8 @@ export default function Home() {
 
                             <div className="flex flex-col gap-3 text-wrap">
                                 <p>
-                                    สวัสดีครับ ผมชื่อ <b>เกม</b> ปีนี้อายุ{" "}
-                                    <b>21 ปี</b> มีความฝันอยากเป็น{" "}
+                                    สวัสดีครับ ผมชื่อ <b>เกม</b> ตอนนี้อายุ{" "}
+                                    <b>{yearOld} ปี</b> มีความฝันอยากเป็น{" "}
                                     <b>โปรแกรมเมอร์</b> และมี <b>สตาร์ทอัพ</b>{" "}
                                     เป็นของตัวเองในอนาคตครับ
                                 </p>
@@ -85,24 +107,38 @@ export default function Home() {
                                     เป็นหลัก
                                     ก่อนจะตัดสินใจเปลี่ยนสายมาเป็นโปรแกรมเมอร์อย่างจริงจังเมื่อประมาณเกือบสองปีที่ผ่านมา
                                     ตอนนี้จึงถือว่ายังคงเป็นเป็น{" "}
-                                    <b>จูเนียร์หน้าใหม่</b> สำหรับวงการนี้
+                                    <b>จูเนียร์หน้าใหม่</b>{" "}
+                                    สำหรับวงการนี้อยู่ครับ
                                 </p>
 
                                 <p>
                                     ผมชอบความอิสระในการทำงาน
-                                    และหลงใหลในแนวคิดการเติบโตของเทคโนโลยี
+                                    และหลงใหลในแนวคิดการเติบโตของเทคโนโลยีที่ยังคงเดินหน้าต่อไปอีกเรื่อยๆ
                                     เพราะผมเชื่อว่า{" "}
                                     <b>
-                                        ถ้ามนุษย์พยายามมากพอ
-                                        ไม่มีอะไรที่เป็นไปไม่ได้
+                                        อะไรก็เป็นไปได้
+                                        หากมนุษย์มีความพยายามมากพอ
                                     </b>{" "}
                                     และด้วยพื้นฐานด้านกราฟิกที่มี
-                                    ผมจึงสามารถนำความคิดสร้างสรรค์มาต่อยอดในงานเขียนโค้ดได้อย่างลงตัว
-                                    ซึ่งปัจจุบันผมทำงานสาย <b>Front-end</b>{" "}
-                                    เป็นหลัก และยังคงเปิดรับความรู้ใหม่ๆ
+                                    ผมจึงสามารถนำความครีเอทีฟมาต่อยอดในงานเขียนโค้ดเพื่อสร้างผลงานที่มีจุดเด่นและความน่าสนใจได้
+                                    ทำให้ปัจจุบันผมทำงานสาย <b>front-end</b>{" "}
+                                    เป็นหลัก แต่ยังคงเปิดรับความรู้ใหม่ๆ
                                     ในด้านอื่นอยู่เสมอครับ
                                 </p>
                             </div>
+
+                            <span className="text-md text-left md:text-sm">
+                                <p>
+                                    <img
+                                        alt="อยากจะร้องไห้"
+                                        width="18"
+                                        height="18"
+                                        src="/emojis/round_pushpin.png"
+                                        className="inline-block items-center"
+                                    />{" "}
+                                    Bangkok, Thailand.
+                                </p>
+                            </span>
                         </div>
                     </div>
 
@@ -112,7 +148,7 @@ export default function Home() {
                             <p>มีชีวิตมาแล้ว</p>
                             <p className="text-6xl">
                                 <NumberTicker
-                                    value={birthDate}
+                                    value={dayCount}
                                     className="text-zinc-900"
                                 />
                             </p>
@@ -133,7 +169,7 @@ export default function Home() {
                                     alt="อยากจะร้องไห้"
                                     width="18"
                                     height="18"
-                                    src="/cry.png"
+                                    src="/emojis/cry.png"
                                     className="ml-1 inline-block items-center"
                                 />
                             </p>
@@ -154,7 +190,9 @@ export default function Home() {
                     {/* kmutnb */}
                     <div
                         className="back relative w-full overflow-hidden bg-cover bg-fixed bg-center py-12 text-center"
-                        style={{ backgroundImage: "url('/kmutnb-uni.jpg')" }}
+                        style={{
+                            backgroundImage: "url('/images/kmutnb-uni.jpg')",
+                        }}
                     >
                         <div className="absolute inset-0 bg-orange-500 mix-blend-multiply"></div>
 
@@ -174,12 +212,12 @@ export default function Home() {
                     {/* Showcases */}
                     <div className="border-t border-zinc-300">
                         <p className="py-4 text-center font-bold text-zinc-900">
-                            ประสบการณ์ที่ผ่านมา
+                            ผลงานต่างๆ
                         </p>
 
                         <div className="grid grid-cols-1 grid-rows-3 gap-4 px-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
                             <Card
-                                thumbnail="/sunnyhellgate-project.jpg"
+                                thumbnail="/images/sunnyhellgate-project.jpg"
                                 title="หนุ่มทรงSAD แห่งดินแดนDiscord #เดี่ยวซันสั้น"
                                 link="https://youtu.be/wByxPzKhJt8"
                                 featured={true}
@@ -187,22 +225,31 @@ export default function Home() {
                             />
 
                             <Card
-                                thumbnail="/toyotapithan.jpg"
+                                thumbnail="/images/toyotapithan.jpg"
                                 title="Toyota Pithan Hatyai"
                                 link="https://g.co/kgs/du2FsNL"
                                 tags={["IT / Programmer (Intern)"]}
                             />
 
                             <Card
-                                thumbnail="/ywc20.jpg"
+                                thumbnail="/images/ywc20.jpg"
                                 title="Young Webmaster Camp 20"
-                                tags={["(Potentially) Paticipant"]}
+                                tags={["Paticipant"]}
                             />
                         </div>
 
-                        <p className="py-4 text-center text-sm text-zinc-900">
-                            และอื่นๆอีกมากมาย...
-                        </p>
+                        <Link
+                            href="/works"
+                            className="group text-center text-sm text-zinc-900 hover:underline"
+                        >
+                            <p className="py-4">
+                                ดูผลงานทั้งหมด{" "}
+                                <ArrowRight
+                                    className="inline ease-in-out group-hover:translate-x-1 group-hover:transition-transform"
+                                    size={14}
+                                />
+                            </p>
+                        </Link>
                     </div>
 
                     {/* Connection */}
@@ -226,7 +273,7 @@ export default function Home() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="/discord-icon.svg"
+                                    src="/icons/discord-icon.svg"
                                     alt="Discord's Icon"
                                     width="46"
                                     height="46"
@@ -241,7 +288,7 @@ export default function Home() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="/facebook-icon.svg"
+                                    src="/icons/facebook-icon.svg"
                                     alt="Facebook's Icon"
                                     width="46"
                                     height="46"
@@ -256,7 +303,7 @@ export default function Home() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="/instagram-icon.svg"
+                                    src="/icons/instagram-icon.svg"
                                     alt="Instragram's Icon"
                                     width="46"
                                     height="46"
@@ -271,7 +318,7 @@ export default function Home() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="/linkedin-icon.svg"
+                                    src="/icons/linkedin-icon.svg"
                                     alt="LinkedIn's Icon"
                                     width="46"
                                     height="46"
@@ -315,7 +362,7 @@ export default function Home() {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="/fastwork-logo.svg"
+                                    src="/icons/fastwork-logo.svg"
                                     alt="Fastwork's Icon"
                                     width="180"
                                     height="180"
@@ -327,25 +374,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <footer className="border-t border-zinc-300">
-                <div className="flex items-center justify-center py-5 text-center text-xs text-zinc-600">
-                    © <GetFullYear /> qwrtsdev. All rights reserved.
-                    <a
-                        href="https://webring.wonderful.software/#qwrtsdev.xyz"
-                        title="วงแหวนเว็บ"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            alt="วงแหวนเว็บ"
-                            width="18"
-                            height="18"
-                            src="https://webring.wonderful.software/webring.black.svg"
-                            className="ml-2 transition-transform duration-200 hover:rotate-12 hover:scale-125"
-                        />
-                    </a>
-                </div>
-            </footer>
+            <Footer />
         </main>
     );
 }
