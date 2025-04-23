@@ -10,6 +10,8 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import Footer from "@/components/global/Footer";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+// import SongPreview from "@/components/global/SongPreview";
+// import data from "@/data/data.json";
 
 export default function Home() {
     const dayCount = getDayCount();
@@ -64,7 +66,7 @@ export default function Home() {
                     <div className="flex flex-col items-center gap-8 border-t border-zinc-300 p-8 md:flex-row">
                         <div className="flex flex-col gap-2">
                             <ScratchToReveal
-                                minScratchPercentage={80}
+                                minScratchPercentage={70}
                                 className="flex items-center justify-center overflow-hidden rounded-2xl border-2"
                                 gradientColors={[
                                     "#18181b",
@@ -86,7 +88,7 @@ export default function Home() {
                             </ScratchToReveal>
 
                             <p className="text-center text-xs font-thin text-zinc-900">
-                                this ugly mf
+                                ขูดเพื่อดูรูปเต็ม
                             </p>
                         </div>
 
@@ -127,7 +129,7 @@ export default function Home() {
                                 </p>
                             </div>
 
-                            <span className="text-md text-left md:text-sm">
+                            <span className="text-sm">
                                 <p>
                                     <img
                                         alt="อยากจะร้องไห้"
@@ -195,8 +197,6 @@ export default function Home() {
                         }}
                     >
                         <div className="absolute inset-0 bg-orange-500 mix-blend-multiply"></div>
-
-                        {/* Optional: add a darkening overlay if needed */}
                         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
 
                         <div className="relative z-10">
@@ -210,8 +210,8 @@ export default function Home() {
                     </div>
 
                     {/* Showcases */}
-                    <div className="border-t border-zinc-300">
-                        <p className="py-4 text-center font-bold text-zinc-900">
+                    <div>
+                        <p className="border-t border-zinc-300 py-4 text-center text-lg font-bold text-zinc-900">
                             ผลงานต่างๆ
                         </p>
 
@@ -250,6 +250,49 @@ export default function Home() {
                                 />
                             </p>
                         </Link>
+                    </div>
+
+                    {/* The Dev Desk */}
+                    <div
+                        className="back relative w-full overflow-hidden bg-cover bg-fixed bg-center p-12 text-center"
+                        style={{
+                            backgroundImage: "url('/images/coding-bg.jpg')",
+                        }}
+                    >
+                        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+
+                        <div className="flex flex-col items-center justify-center">
+                            <Image
+                                src="/icons/discord-white.svg"
+                                alt="Profile Image"
+                                width={50}
+                                height={50}
+                                className="z-10 rounded-2xl"
+                            />
+
+                            <div className="relative z-10 flex flex-col gap-6">
+                                <div className="text-zinc-50">
+                                    <p className="text-4xl font-black">
+                                        The Dev's Desk
+                                    </p>
+                                    <p>
+                                        คอมมูนิตี้สำหรับเหล่าโปรแกรมเมอร์ &
+                                        สายเทค
+                                    </p>
+                                </div>
+
+                                <a
+                                    href="https://discord.gg/JKsYSd4TVf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className=""
+                                >
+                                    <span className="inline-block rounded-sm bg-[#5865F2] px-3 py-1 text-zinc-50 transition-transform duration-200 hover:scale-105">
+                                        เข้าร่วมคอมมูนิตี้
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Connection */}
@@ -312,7 +355,7 @@ export default function Home() {
                             </a>
 
                             <a
-                                href="https://www.instagram.com/sillyqwrts"
+                                href="https://www.linkedin.com/in/qwrtsdev/"
                                 title="LinkedIn"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -344,7 +387,7 @@ export default function Home() {
                     </div>
 
                     {/* Tastes */}
-                    <div className="justify-center"></div>
+                    <div className="">{/* update .. */}</div>
 
                     {/* Tie-In */}
                     <div className="flex flex-col items-center justify-center gap-8 border-t border-zinc-300 py-12 text-center">

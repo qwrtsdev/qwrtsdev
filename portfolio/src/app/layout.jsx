@@ -48,9 +48,6 @@ export const metadata = {
             "A passionate programmer and graphic designer. Who wants to create well-crafted softwares that seamlessly blends functionality with aesthetics.",
         image: "https://qwrtsdev.xyz/qw-opengraph.png",
     },
-    other: {
-        "fb:app_id": "1431782707788084",
-    },
 };
 
 export default function RootLayout({ children }) {

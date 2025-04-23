@@ -6,22 +6,22 @@ export default function NotFound() {
     return (
         <div className="h-screen">
             <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
-                <p className="text-4xl font-bold text-zinc-900">404</p>
+                <div className="flex h-full w-full max-w-4xl flex-col items-center justify-center gap-4 border-l border-r border-zinc-300 text-center text-zinc-900">
+                    <p className="text-4xl font-bold">404</p>
 
-                <p className="text-2xl text-zinc-900">
-                    ไม่พบหน้าที่คุณต้องการค้นหา
-                </p>
+                    <p className="text-2xl">ไม่พบหน้าที่คุณต้องการค้นหา</p>
 
-                <Link
-                    href="/"
-                    className="group items-center justify-center text-sm hover:underline"
-                >
-                    <ArrowLeft
-                        className="inline ease-in-out group-hover:-translate-x-1 group-hover:transition-transform"
-                        size={14}
-                    />{" "}
-                    กลับไปที่หน้าแรก
-                </Link>
+                    <Link
+                        href="/"
+                        className="group items-center justify-center text-sm hover:underline"
+                    >
+                        <ArrowLeft
+                            className="inline ease-in-out group-hover:-translate-x-1 group-hover:transition-transform"
+                            size={14}
+                        />{" "}
+                        กลับไปที่หน้าแรก
+                    </Link>
+                </div>
             </div>
 
             <Footer />
