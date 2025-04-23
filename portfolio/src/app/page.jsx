@@ -211,7 +211,7 @@ export default function Home() {
 
                     {/* Showcases */}
                     <div>
-                        <p className="border-t border-zinc-300 py-4 text-center text-lg font-bold text-zinc-900">
+                        <p className="py-4 text-center text-lg font-bold text-zinc-900">
                             ผลงานต่างๆ
                         </p>
 
