@@ -252,9 +252,12 @@ export default function Home() {
                         </Link>
                     </div>
 
+                    {/* Tastes */}
+                    <div className="">{/* update .. */}</div>
+
                     {/* The Dev Desk */}
                     <div
-                        className="back relative w-full overflow-hidden bg-cover bg-fixed bg-center p-12 text-center"
+                        className="back relative w-full overflow-hidden bg-cover bg-fixed bg-center py-12 text-center"
                         style={{
                             backgroundImage: "url('/images/coding-bg.jpg')",
                         }}
@@ -385,9 +388,6 @@ export default function Home() {
                             <span>มาเชื่อมต่อกันเถอะ </span>
                         </Marquee>
                     </div>
-
-                    {/* Tastes */}
-                    <div className="">{/* update .. */}</div>
 
                     {/* Tie-In */}
                     <div className="flex flex-col items-center justify-center gap-8 border-t border-zinc-300 py-12 text-center">
