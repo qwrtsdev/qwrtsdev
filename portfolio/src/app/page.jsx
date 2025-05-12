@@ -10,10 +10,9 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import Footer from "@/components/global/Footer";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-// import SongPreview from "@/components/global/SongPreview";
-// import data from "@/data/data.json";
+import SpotifySection from "@/components/global/SpotifySection";
 
-export default function Home() {
+export default async function Home() {
     const dayCount = getDayCount();
     const girlfriend = 0;
     const yearOld = getFullYear() - 2004;
@@ -108,7 +107,7 @@ export default function Home() {
                                     แต่เดิมแล้วผมทำงานด้าน <b>กราฟิกดีไซน์</b>{" "}
                                     เป็นหลัก
                                     ก่อนจะตัดสินใจเปลี่ยนสายมาเป็นโปรแกรมเมอร์อย่างจริงจังเมื่อประมาณเกือบสองปีที่ผ่านมา
-                                    ตอนนี้จึงถือว่ายังคงเป็นเป็น{" "}
+                                    ตอนนี้จึงถือว่ายังคงเป็น{" "}
                                     <b>จูเนียร์หน้าใหม่</b>{" "}
                                     สำหรับวงการนี้อยู่ครับ
                                 </p>
@@ -253,50 +252,7 @@ export default function Home() {
                     </div>
 
                     {/* Tastes */}
-                    <div className="">{/* update .. */}</div>
-
-                    {/* The Dev Desk */}
-                    <div
-                        className="back relative w-full overflow-hidden bg-cover bg-fixed bg-center py-12 text-center"
-                        style={{
-                            backgroundImage: "url('/images/coding-bg.jpg')",
-                        }}
-                    >
-                        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-
-                        <div className="flex flex-col items-center justify-center">
-                            <Image
-                                src="/icons/discord-white.svg"
-                                alt="Profile Image"
-                                width={50}
-                                height={50}
-                                className="z-10 rounded-2xl"
-                            />
-
-                            <div className="relative z-10 flex flex-col gap-6">
-                                <div className="text-zinc-50">
-                                    <p className="text-4xl font-black">
-                                        The Dev's Desk
-                                    </p>
-                                    <p>
-                                        คอมมูนิตี้สำหรับเหล่าโปรแกรมเมอร์ &
-                                        สายเทค
-                                    </p>
-                                </div>
-
-                                <a
-                                    href="https://discord.gg/JKsYSd4TVf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className=""
-                                >
-                                    <span className="inline-block rounded-sm bg-[#5865F2] px-3 py-1 text-zinc-50 transition-transform duration-200 hover:scale-105">
-                                        เข้าร่วมคอมมูนิตี้
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <SpotifySection playlistId="5Ruk4LEhjCofK2TQGEe5KP" />
 
                     {/* Connection */}
                     <div className="border-t border-zinc-300">

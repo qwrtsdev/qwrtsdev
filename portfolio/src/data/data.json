@@ -18,10 +18,5 @@
         "image": "/images/project2.png",
         "url": "https://example.com/project2"
         }
-    ],
-
-    "tracks": [
-        "https://open.spotify.com/track/7KA4W4McWYRpgf0fWsJZWB?si=03f3f5b7f6844df6",
-        "https://open.spotify.com/track/35xSkNIXi504fcEwz9USRB?si=02f46a8b92e248f8"
     ]
 }

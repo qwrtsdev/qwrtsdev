@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "@/components/ui/toaster";
 
 const LineSeed = localFont({
     src: [
@@ -60,6 +61,7 @@ export default function RootLayout({ children }) {
                     {children}
                     <SpeedInsights />
                     <Analytics />
+                    <Toaster />
                 </div>
             </body>
         </html>
