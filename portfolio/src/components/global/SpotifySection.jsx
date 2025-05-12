@@ -3,14 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Music, ArrowRight, LoaderCircle } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+// import { useToast } from "@/hooks/use-toast";
 
 export default function SpotifySection({ playlistId }) {
     const [tracks, setTracks] = useState([]);
     const [selected, setSelected] = useState(null);
     const [loading, setLoading] = useState(true);
     const audioRef = useRef();
-    const { toast } = useToast();
+    // const { toast } = useToast();
 
     useEffect(() => {
         fetch(`/api/tracks?playlist=${playlistId}`)
@@ -27,10 +27,10 @@ export default function SpotifySection({ playlistId }) {
 
     function playPreview(preview_url) {
         if (!preview_url) {
-            toast({
-                title: "ไม่สามารถเล่นตัวอย่างเพลงได้",
-                description: "No Spotify previews available.",
-            });
+            // toast({
+            //     title: "ไม่สามารถเล่นตัวอย่างเพลงได้",
+            //     description: "No Spotify previews available.",
+            // });
 
             return;
         }
@@ -41,7 +41,7 @@ export default function SpotifySection({ playlistId }) {
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center border-t border-zinc-300 py-8 text-center text-zinc-950 lg:flex-row">
+            <div className="flex items-center justify-center border-t border-zinc-300 py-8 text-center font-bold text-zinc-950 lg:flex-row">
                 <LoaderCircle
                     color="#09090b"
                     size={12}
@@ -71,12 +71,18 @@ export default function SpotifySection({ playlistId }) {
                                 </p>
                             </div>
 
-                            <button
-                                onClick={() => playPreview(t.preview_url)}
-                                className="rounded-full bg-green-500 p-3 text-white transition hover:bg-green-600"
+                            <a
+                                href={t.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                <Music size={18} />
-                            </button>
+                                <img
+                                    src="/icons/spotify-color-icon.svg"
+                                    alt="ดูบน Spotify"
+                                    width="32"
+                                    height="32"
+                                />
+                            </a>
                         </div>
                     ))}
                 </div>
@@ -109,7 +115,7 @@ export default function SpotifySection({ playlistId }) {
                 )}
             </div>
 
-            <audio ref={audioRef} className="hidden" />
+            {/* <audio ref={audioRef} className="hidden" /> */}
         </div>
     );
 }

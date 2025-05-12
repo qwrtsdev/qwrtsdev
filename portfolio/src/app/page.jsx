@@ -1,4 +1,5 @@
 import Card from "@/components/global/Card";
+import SpotifySection from "@/components/global/SpotifySection";
 import { Marquee } from "@/components/magicui/marquee";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { getDayCount, getFullYear } from "@/utils/dates";
@@ -10,7 +11,6 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import Footer from "@/components/global/Footer";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import SpotifySection from "@/components/global/SpotifySection";
 
 export default async function Home() {
     const dayCount = getDayCount();
@@ -231,9 +231,10 @@ export default async function Home() {
                             />
 
                             <Card
-                                thumbnail="/images/ywc20.jpg"
-                                title="Young Webmaster Camp 20"
-                                tags={["Paticipant"]}
+                                thumbnail="/images/swipify-react.webp"
+                                title="Swipify React"
+                                tags={["Contributor"]}
+                                link="https://github.com/qwrtsdev/swipify-react"
                             />
                         </div>
 
