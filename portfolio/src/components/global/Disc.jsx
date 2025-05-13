@@ -15,6 +15,7 @@ export default function Disc({ track }) {
                         <Image
                             src={track.image}
                             alt={`${track.name} – ${track.artists.join(", ")}`}
+                            title={`${track.name} – ${track.artists.join(", ")}`}
                             fill
                             className="rounded-md object-cover shadow-md transition-transform duration-200 group-hover:scale-105"
                         />
