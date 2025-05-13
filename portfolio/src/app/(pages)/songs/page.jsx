@@ -32,6 +32,7 @@ export default function Songs() {
                               <div className="h-full w-full animate-pulse rounded-md bg-zinc-200 shadow-md" />
                           </div>
                       </AspectRatio>
+
                       <div className="min-w-0">
                           <div className="mb-1 h-5 animate-pulse rounded bg-zinc-200" />
                           <div className="h-4 animate-pulse rounded bg-zinc-200" />
@@ -78,7 +79,7 @@ export default function Songs() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-2 grid-rows-3 gap-6 border-t border-zinc-300 p-6 sm:grid-cols-4 sm:grid-rows-1 sm:gap-0 sm:p-4">
+                    <div className="grid grid-cols-2 grid-rows-1 gap-6 border-t border-zinc-300 p-6 sm:grid-cols-3 sm:gap-0 sm:p-4 md:grid-cols-4">
                         {items}
                     </div>
                 </div>
