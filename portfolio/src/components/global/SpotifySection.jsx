@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Music, ArrowRight, LoaderCircle } from "lucide-react";
 // import { useToast } from "@/hooks/use-toast";
 
-export default function SpotifySection({ playlistId }) {
+export default function SpotifySection() {
     const [tracks, setTracks] = useState([]);
     const [selected, setSelected] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -13,7 +13,9 @@ export default function SpotifySection({ playlistId }) {
     // const { toast } = useToast();
 
     useEffect(() => {
-        fetch(`/api/tracks?playlist=${playlistId}`)
+        fetch(
+            `/api/tracks?playlist=${process.env.NEXT_PUBLIC_SPOTIFY_PLAYLIST_ID}`,
+        )
             .then((res) => res.json())
             .then((json) => {
                 const topThree = (json.tracks || []).slice(0, 3);
@@ -23,7 +25,7 @@ export default function SpotifySection({ playlistId }) {
                 setLoading(false);
             })
             .catch(console.error);
-    }, [playlistId]);
+    }, []);
 
     function playPreview(preview_url) {
         if (!preview_url) {

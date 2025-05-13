@@ -3,10 +3,6 @@ import Footer from "@/components/global/Footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-export const metadata = {
-    title: "Works",
-};
-
 export default function Works() {
     const works = [
         {

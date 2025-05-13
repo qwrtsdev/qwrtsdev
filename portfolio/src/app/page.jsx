@@ -253,7 +253,7 @@ export default async function Home() {
                     </div>
 
                     {/* Tastes */}
-                    <SpotifySection playlistId="5Ruk4LEhjCofK2TQGEe5KP" />
+                    <SpotifySection />
 
                     {/* Connection */}
                     <div className="border-t border-zinc-300">
