@@ -11,11 +11,13 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import Footer from "@/components/global/Footer";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { works } from "@/data/data.json";
 
 export default async function Home() {
     const dayCount = getDayCount();
     const girlfriend = 0;
     const yearOld = getFullYear() - 2004;
+    const topThreeWorks = works.slice(0, 3);
 
     return (
         <main className="h-full items-center justify-center bg-zinc-50 text-zinc-900">
@@ -215,27 +217,17 @@ export default async function Home() {
                         </p>
 
                         <div className="grid grid-cols-1 grid-rows-3 gap-4 px-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
-                            <Card
-                                thumbnail="/images/sunnyhellgate-project.jpg"
-                                title="หนุ่มทรงSAD แห่งดินแดนDiscord #เดี่ยวซันสั้น"
-                                link="https://youtu.be/wByxPzKhJt8"
-                                featured={true}
-                                tags={["Video Editor"]}
-                            />
-
-                            <Card
-                                thumbnail="/images/toyotapithan.jpg"
-                                title="Toyota Pithan Hatyai"
-                                link="https://g.co/kgs/du2FsNL"
-                                tags={["IT / Programmer (Intern)"]}
-                            />
-
-                            <Card
-                                thumbnail="/images/swipify-react.webp"
-                                title="Swipify React"
-                                tags={["Contributor"]}
-                                link="https://github.com/qwrtsdev/swipify-react"
-                            />
+                            {topThreeWorks.map((work, index) => (
+                                <div key={index} className="">
+                                    <Card
+                                        thumbnail={work?.thumbnail || null}
+                                        title={work?.title || null}
+                                        link={work?.link || null}
+                                        featured={work?.featured || false}
+                                        tags={work?.role || []}
+                                    />
+                                </div>
+                            ))}
                         </div>
 
                         <Link

@@ -2,47 +2,9 @@ import Card from "@/components/global/Card";
 import Footer from "@/components/global/Footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { works } from "@/data/data.json";
 
 export default function Works() {
-    const works = [
-        {
-            title: "หนุ่มทรงSAD แห่งดินแดนDiscord #เดี่ยวซันสั้น",
-            thumbnail: "/images/sunnyhellgate-project.jpg",
-            link: "https://youtu.be/wByxPzKhJt8",
-            featured: true,
-            tags: ["Video Editor"],
-        },
-        {
-            title: "Toyota Pithan Hatyai",
-            thumbnail: "/images/toyotapithan.jpg",
-            link: "https://g.co/kgs/du2FsNL",
-            tags: ["IT / Programmer (Intern)"],
-        },
-        {
-            title: "Young Webmaster Camp 20",
-            thumbnail: "/images/ywc20.jpg",
-            tags: ["Paticipant"],
-        },
-        {
-            title: "QwrtsArchive",
-            thumbnail: "/images/qwrtsarchive.jpg",
-            link: "https://www.youtube.com/@qwrtsarchive",
-            tags: ["Old YouTube Channel"],
-        },
-        {
-            title: "GameFiend",
-            thumbnail: "/images/gamefiend.png",
-            link: "https://www.facebook.com/gamefiendmedia",
-            tags: ["Founder / Community Manager"],
-        },
-        {
-            title: "Swipify React",
-            thumbnail: "/images/swipify-react.webp",
-            link: "https://github.com/qwrtsdev/swipify-react",
-            tags: ["Contributor"],
-        },
-    ];
-
     return (
         <div className="h-full items-center justify-center">
             <div className="4xl:px-0 flex w-full items-center justify-center px-4">
@@ -65,7 +27,7 @@ export default function Works() {
                         </Link>
                     </div>
 
-                    <div className="grid grid-cols-1 grid-rows-3 gap-4 border-t border-zinc-300 p-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
+                    <div className="grid grid-cols-1 grid-rows-3 gap-6 border-t border-zinc-300 p-6 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
                         {works.map((work, index) => (
                             <div key={index} className="">
                                 <Card
@@ -73,7 +35,7 @@ export default function Works() {
                                     title={work?.title || null}
                                     link={work?.link || null}
                                     featured={work?.featured || false}
-                                    tags={work?.tags || []}
+                                    tags={work?.role || []}
                                 />
                             </div>
                         ))}

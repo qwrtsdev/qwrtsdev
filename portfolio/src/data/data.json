@@ -1,22 +1,40 @@
 {
     "works": [
         {
-        "title": "Portfolio",
-        "description": "My personal portfolio website.",
-        "image": "/images/portfolio.png",
-        "url": "https://example.com/portfolio"
+            "title": "หนุ่มทรงSAD แห่งดินแดนDiscord #เดี่ยวซันสั้น",
+            "thumbnail": "/images/sunnyhellgate-project.jpg",
+            "link": "https://youtu.be/wByxPzKhJt8",
+            "featured": true,
+            "role": ["Video Editor"]
         },
         {
-        "title": "Project 1",
-        "description": "Description of project 1.",
-        "image": "/images/project1.png",
-        "url": "https://example.com/project1"
+            "title": "Toyota Pithan Hatyai",
+            "thumbnail": "/images/toyotapithan.jpg",
+            "link": "https://g.co/kgs/du2FsNL",
+            "role": ["IT / Programmer (Intern)"]
         },
         {
-        "title": "Project 2",
-        "description": "Description of project 2.",
-        "image": "/images/project2.png",
-        "url": "https://example.com/project2"
+            "title": "Swipify React",
+            "thumbnail": "/images/swipify-react.webp",
+            "link": "https://github.com/qwrtsdev/swipify-react",
+            "role": ["Contributor"]
+        },
+        {
+            "title": "Young Webmaster Camp 20",
+            "thumbnail": "/images/ywc20.jpg",
+            "role": ["Paticipant"]
+        },
+        {
+            "title": "QwrtsArchive",
+            "thumbnail": "/images/qwrtsarchive.jpg",
+            "link": "https://www.youtube.com/@qwrtsarchive",
+            "role": ["Old YouTube Channel"]
+        },
+        {
+            "title": "GameFiend",
+            "thumbnail": "/images/gamefiend.png",
+            "link": "https://www.facebook.com/gamefiendmedia",
+            "role": ["Founder / Community Manager"]
         }
     ]
 }
