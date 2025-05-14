@@ -49,7 +49,7 @@ export default function Songs() {
                     <div className="flex flex-col gap-4 p-6">
                         <span>
                             <h2 className="text-2xl font-bold">SONGS</h2>
-                            <p>รวมเพลง (ไม่) ทั้งหมดที่ผมชอบ</p>
+                            <p>คอลเลคชั่นเพลงที่ผมชอบ</p>
                         </span>
 
                         <div className="flex flex-col gap-1">
