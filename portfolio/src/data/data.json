@@ -20,9 +20,16 @@
             "role": ["Contributor"]
         },
         {
-            "title": "Young Webmaster Camp 20",
+            "title": "KMUTNB ECE Utilities Bot",
+            "thumbnail": "/images/ece-utils.png",
+            "link": "https://github.com/qwrtsdev/ece-utils",
+            "role": ["Contributor"]
+        },
+        {
+            "title": "YWC20 Homework",
             "thumbnail": "/images/ywc20.jpg",
-            "role": ["Paticipant"]
+            "link": "https://github.com/qwrtsdev/ywc20-homework",
+            "role": ["Contributor"]
         },
         {
             "title": "QwrtsArchive",
