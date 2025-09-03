@@ -5,25 +5,16 @@ export async function GET(req) {
     const { searchParams } = new URL(req.url);
     const playlistId = searchParams.get("playlist");
     if (!playlistId) {
-        return new Response(
-        JSON.stringify({ error: "ขาดพารามิเตอร์ `playlist`" }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
-        );
+        return new Response(JSON.stringify({ error: "ขาดพารามิเตอร์ `playlist`" }), { status: 400, headers: { "Content-Type": "application/json" } });
     }
 
     const token = await getSpotifyToken();
-    const res = await fetch(
-        `https://api.spotify.com/v1/playlists/${playlistId}`,
-        { headers: { Authorization: `Bearer ${token}` } }
-    );
+    const res = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}`, { headers: { Authorization: `Bearer ${token}` }});
 
     if (!res.ok) {
         const errorBody = await res.json().catch(() => ({}));
         
-        return new Response(
-        JSON.stringify({ error: "ไม่สามารถโหลดข้อมูลได้", details: errorBody }),
-        { status: res.status, headers: { "Content-Type": "application/json" } }
-        );
+        return new Response(JSON.stringify({ error: "ไม่สามารถโหลดข้อมูลได้", details: errorBody }), { status: res.status, headers: { "Content-Type": "application/json" } });
     }
 
     const playlist = await res.json();
