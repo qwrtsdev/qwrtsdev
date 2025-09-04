@@ -1,5 +1,4 @@
-import axios from "axios";
-import { AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 
 let accessToken: string | null;
 let tokenExpiresAt: number | null;

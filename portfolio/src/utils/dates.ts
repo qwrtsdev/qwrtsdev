@@ -1,13 +1,13 @@
-function getFullYear() {
+function getFullYear(): number {
     return new Date().getFullYear();
 }
 
-function getDayCount() {
-    const start: Date = new Date("2004-11-13");
-    const today: Date = new Date();
+function getDayCount(): number {
+    const start = new Date("2004-11-13");
+    const today = new Date();
 
-    const diffTime: number = today.getTime() - start.getTime();
-    const diffDays: number = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    const diffTime = today.getTime() - start.getTime();
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
     return diffDays;
 }

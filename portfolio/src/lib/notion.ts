@@ -1,4 +1,5 @@
-import { Client } from "@notionhq/client";
+import * as React from "react";
+import { BlockObjectResponse, Client, PageObjectResponse } from "@notionhq/client";
 import "server-only";
 
 export const notion = new Client({
@@ -28,7 +29,7 @@ export const fetchBySlug = React.cache((slug) => {
                 },
             },
         })
-        .then((res) => res.results[0]);
+        .then((res) => res.results[0] as PageObjectResponse | undefined);
 });
 
 export const fetchPageBlocks = React.cache((pageId) => {
@@ -36,5 +37,5 @@ export const fetchPageBlocks = React.cache((pageId) => {
         .list({
             block_id: pageId,
         })
-        .then((res) => res.results);
+        .then((res) => res.results as BlockObjectResponse[]);
 });
