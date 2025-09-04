@@ -1,16 +1,17 @@
 import axios from "axios";
+import { AxiosResponse } from "axios";
 
-let accessToken = null;
-let tokenExpiresAt = null;
+let accessToken: string | null;
+let tokenExpiresAt: number | null;
 
-export async function getSpotifyToken() {
-    const now = Date.now();
+export async function getSpotifyToken(): Promise<string> {
+    const now: number = Date.now();
 
     if (accessToken && tokenExpiresAt && now < tokenExpiresAt) {
         return accessToken;
     }
 
-    const resp = await axios.post(
+    const resp: AxiosResponse = await axios.post(
         "https://accounts.spotify.com/api/token",
         
         new URLSearchParams({ grant_type: "client_credentials" }),

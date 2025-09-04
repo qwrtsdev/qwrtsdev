@@ -18,5 +18,5 @@ export default async function Page({ params }) {
 
     const html = await renderer.render(...blocks);
 
-    return <div dangerouslySetInnerHTML={html}></div>;
+    return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
 }
