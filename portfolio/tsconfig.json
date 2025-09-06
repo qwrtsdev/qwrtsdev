@@ -31,8 +31,7 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/lib/notion.js"  ],
+    "**/*.tsx",  ],
   "exclude": [
     "node_modules"
   ]

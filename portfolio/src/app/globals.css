@@ -112,8 +112,3 @@
     -ms-overflow-style: none;  /* Hide scrollbar for IE/Edge */
     scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }
-
-.notion p {
-    margin: 0;
-    line-height: 1.8rem;
-}
