@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { BlockObjectResponse, Client, PageObjectResponse } from "@notionhq/client";
 import "server-only";
 
@@ -18,7 +18,7 @@ export const fetchPages = React.cache(() => {
     });
 });
 
-export const fetchBySlug = React.cache((slug) => {
+export const fetchBySlug = React.cache((slug: string) => {
     return notion.databases
         .query({
             database_id: process.env.NOTION_DATABASE_ID,
@@ -32,7 +32,7 @@ export const fetchBySlug = React.cache((slug) => {
         .then((res) => res.results[0] as PageObjectResponse | undefined);
 });
 
-export const fetchPageBlocks = React.cache((pageId) => {
+export const fetchPageBlocks = React.cache((pageId: string) => {
     return notion.blocks.children
         .list({
             block_id: pageId,

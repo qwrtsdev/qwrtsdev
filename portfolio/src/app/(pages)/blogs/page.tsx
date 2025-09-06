@@ -4,6 +4,6 @@ export default async function Page() {
     const post = await fetchPages();
 
     return (
-        <></>
+        <>hi ja</>
     )
 }

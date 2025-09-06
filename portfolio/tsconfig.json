@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "target": "ES2017",
     "lib": [
       "dom",
@@ -21,7 +25,7 @@
       {
         "name": "next"
       }
-    ]
+    ],
   },
   "include": [
     "next-env.d.ts",
@@ -31,8 +35,5 @@
 , "src/lib/notion.js"  ],
   "exclude": [
     "node_modules"
-  ],
-  "paths":{
-    "@/*": ["src/*"]
-  }
+  ]
 }
