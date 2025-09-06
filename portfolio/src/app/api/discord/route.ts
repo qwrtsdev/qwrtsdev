@@ -1,4 +1,6 @@
-export async function GET(req) {
+import { NextRequest, NextResponse } from "next/server";
+
+export async function GET(): Promise<NextResponse> {
     const res = await fetch(
         `https://api.lanyard.rest/v1/users/${process.env.NEXT_PUBLIC_DISCORD_ID}`,
     );
@@ -6,7 +8,7 @@ export async function GET(req) {
     if (!res.ok) {
         const errorBody = await res.json().catch(() => ({}));
 
-        return new Response(
+        return new NextResponse(
             JSON.stringify({
                 error: "ไม่สามารถโหลดข้อมูลได้",
                 details: errorBody,
@@ -19,9 +21,8 @@ export async function GET(req) {
     }
 
     const resjson = await res.json();
-    console.log(resjson);
 
-    return new Response(JSON.stringify({ resjson }), {
+    return new NextResponse(JSON.stringify({ resjson }), {
         status: 200,
         headers: { "Content-Type": "application/json" },
     });

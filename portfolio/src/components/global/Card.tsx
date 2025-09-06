@@ -21,10 +21,11 @@ export default function Card({ title, thumbnail, link, featured, tags }) {
 
                 {link && (
                     <span className="absolute bottom-2 right-2 z-10">
-                        <img
+                        <Image
                             src="/icons/newtab-icon.svg"
                             alt="New Tab Icon"
                             className="drop-shadow-black h-4 w-4 opacity-0 drop-shadow-lg transition-opacity duration-200 group-hover:opacity-100"
+                            fill
                         />
                     </span>
                 )}

@@ -31,7 +31,7 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx",  ],
+    "**/*.tsx", "src/app/(pages)/works/page.jsx", "src/app/api/tracks/route.js",  ],
   "exclude": [
     "node_modules"
   ]

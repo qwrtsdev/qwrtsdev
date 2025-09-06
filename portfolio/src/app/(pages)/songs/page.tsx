@@ -40,7 +40,7 @@ export default function Songs() {
                   </div>
               </div>
           ))
-        : tracks.map((t) => <Disc key={t.id} track={t} className="" />);
+        : tracks.map((t) => <Disc key={t.id} track={t} />);
 
     return (
         <div className="h-full items-center justify-center">

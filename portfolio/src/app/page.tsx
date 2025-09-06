@@ -40,6 +40,8 @@ export default async function Home() {
                                     as="h1"
                                     className="text-wrap text-5xl font-black md:text-8xl"
                                     once
+                                    segmentClassName=""
+                                    variants={null}
                                 >
                                     NUTTAPONG
                                 </TextAnimate>
@@ -50,6 +52,8 @@ export default async function Home() {
                                     as="h1"
                                     className="text-wrap text-5xl font-black md:text-8xl"
                                     once
+                                    segmentClassName=""
+                                    variants={null}
                                 >
                                     NAKAWIROT
                                 </TextAnimate>
@@ -76,6 +80,7 @@ export default async function Home() {
                                 ]}
                                 width={250}
                                 height={250}
+                                onComplete={null}
                             >
                                 <AspectRatio ratio={1 / 1} className="w-full">
                                     <Image
@@ -132,7 +137,7 @@ export default async function Home() {
 
                             <span className="text-sm">
                                 <p>
-                                    <img
+                                    <Image
                                         alt="อยากจะร้องไห้"
                                         width="18"
                                         height="18"
@@ -168,7 +173,7 @@ export default async function Home() {
                             </p>
                             <p>
                                 คน
-                                <img
+                                <Image
                                     alt="อยากจะร้องไห้"
                                     width="18"
                                     height="18"
@@ -250,13 +255,13 @@ export default async function Home() {
                     {/* Connection */}
                     <div className="border-t border-zinc-300">
                         <Marquee repeat={3} className="font-bold text-zinc-300">
-                            <span>let's connect </span>
+                            <span>let&apos;s connect </span>
                             <span>มาเชื่อมต่อกันเถอะ </span>
-                            <span>let's connect </span>
+                            <span>let&apos;s connect </span>
                             <span>มาเชื่อมต่อกันเถอะ </span>
-                            <span>let's connect </span>
+                            <span>let&apos;s connect </span>
                             <span>มาเชื่อมต่อกันเถอะ </span>
-                            <span>let's connect </span>
+                            <span>let&apos;s connect </span>
                             <span>มาเชื่อมต่อกันเถอะ </span>
                         </Marquee>
 
@@ -267,7 +272,7 @@ export default async function Home() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img
+                                <Image
                                     src="/icons/discord-icon.svg"
                                     alt="Discord's Icon"
                                     width="46"
@@ -282,7 +287,7 @@ export default async function Home() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img
+                                <Image
                                     src="/icons/facebook-icon.svg"
                                     alt="Facebook's Icon"
                                     width="46"
@@ -297,7 +302,7 @@ export default async function Home() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img
+                                <Image
                                     src="/icons/instagram-icon.svg"
                                     alt="Instragram's Icon"
                                     width="46"
@@ -312,7 +317,7 @@ export default async function Home() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img
+                                <Image
                                     src="/icons/linkedin-icon.svg"
                                     alt="LinkedIn's Icon"
                                     width="46"
@@ -327,13 +332,13 @@ export default async function Home() {
                             reverse={true}
                             className="font-bold text-zinc-300"
                         >
-                            <span>let's connect </span>
+                            <span>let&apos;s connect </span>
                             <span>มาเชื่อมต่อกันเถอะ </span>
-                            <span>let's connect </span>
+                            <span>let&apos;s connect </span>
                             <span>มาเชื่อมต่อกันเถอะ </span>
-                            <span>let's connect </span>
+                            <span>let&apos;s connect </span>
                             <span>มาเชื่อมต่อกันเถอะ </span>
-                            <span>let's connect </span>
+                            <span>let&apos;s connect </span>
                             <span>มาเชื่อมต่อกันเถอะ </span>
                         </Marquee>
                     </div>
@@ -353,7 +358,7 @@ export default async function Home() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img
+                                <Image
                                     src="/icons/fastwork-logo.svg"
                                     alt="Fastwork's Icon"
                                     width="180"

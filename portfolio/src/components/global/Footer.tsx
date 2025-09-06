@@ -1,4 +1,5 @@
 import { getFullYear } from "@/utils/dates";
+import Image from "next/image";
 
 export default function Footer() {
     const fullYear = getFullYear();
@@ -13,7 +14,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <img
+                    <Image
                         alt="วงแหวนเว็บ"
                         width="18"
                         height="18"

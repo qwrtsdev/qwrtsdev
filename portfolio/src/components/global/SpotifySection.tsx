@@ -1,16 +1,14 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Music, ArrowRight, LoaderCircle } from "lucide-react";
-// import { useToast } from "@/hooks/use-toast";
+import Image from "next/image";
+import { ArrowRight, LoaderCircle } from "lucide-react";
 
 export default function SpotifySection() {
     const [tracks, setTracks] = useState([]);
     const [selected, setSelected] = useState(null);
     const [loading, setLoading] = useState(true);
-    const audioRef = useRef();
-    // const { toast } = useToast();
 
     useEffect(() => {
         fetch(
@@ -26,20 +24,6 @@ export default function SpotifySection() {
             })
             .catch(console.error);
     }, []);
-
-    function playPreview(preview_url) {
-        if (!preview_url) {
-            // toast({
-            //     title: "ไม่สามารถเล่นตัวอย่างเพลงได้",
-            //     description: "No Spotify previews available.",
-            // });
-
-            return;
-        }
-
-        audioRef.current.src = preview_url;
-        audioRef.current.play();
-    }
 
     if (loading) {
         return (
@@ -78,7 +62,7 @@ export default function SpotifySection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img
+                                <Image
                                     src="/icons/spotify-color-icon.svg"
                                     alt="ดูบน Spotify"
                                     width="32"
@@ -107,17 +91,18 @@ export default function SpotifySection() {
 
             <div className="flex w-full items-center justify-center px-6 pt-6 lg:w-1/3 lg:pb-6">
                 {selected?.image ? (
-                    <img
-                        src={selected.image}
-                        alt={selected.name}
-                        className="w-full max-w-sm rounded-lg object-cover shadow"
-                    />
+                    <div className="relative w-full max-w-sm aspect-square">
+                        <Image
+                            src={selected.image}
+                            alt={selected.name}
+                            className="rounded-lg object-cover shadow"
+                            fill
+                        />
+                    </div>
                 ) : (
                     <div className="bg-300 h-full w-full max-w-sm animate-pulse rounded-lg object-cover shadow" />
                 )}
             </div>
-
-            {/* <audio ref={audioRef} className="hidden" /> */}
         </div>
     );
 }

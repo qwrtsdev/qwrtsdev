@@ -1,11 +1,12 @@
-// app/api/playlist/route.js (Next.js App Router)
 import { getSpotifyToken } from "@/utils/spotify";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req) {
+export async function GET(req: NextRequest): Promise<NextResponse> {
     const { searchParams } = new URL(req.url);
     const playlistId = searchParams.get("playlist");
+
     if (!playlistId) {
-        return new Response(JSON.stringify({ error: "ขาดพารามิเตอร์ `playlist`" }), { status: 400, headers: { "Content-Type": "application/json" } });
+        return new NextResponse(JSON.stringify({ error: "ขาดพารามิเตอร์ `playlist`" }), { status: 400, headers: { "Content-Type": "application/json" } });
     }
 
     const token = await getSpotifyToken();
@@ -14,7 +15,7 @@ export async function GET(req) {
     if (!res.ok) {
         const errorBody = await res.json().catch(() => ({}));
         
-        return new Response(JSON.stringify({ error: "ไม่สามารถโหลดข้อมูลได้", details: errorBody }), { status: res.status, headers: { "Content-Type": "application/json" } });
+        return new NextResponse(JSON.stringify({ error: "ไม่สามารถโหลดข้อมูลได้", details: errorBody }), { status: res.status, headers: { "Content-Type": "application/json" } });
     }
 
     const playlist = await res.json();
@@ -26,7 +27,7 @@ export async function GET(req) {
         url: track.external_urls.spotify
     }));
 
-    return new Response(JSON.stringify({ tracks }), {
+    return new NextResponse(JSON.stringify({ tracks }), {
         status: 200,
         headers: { "Content-Type": "application/json" },
     });
