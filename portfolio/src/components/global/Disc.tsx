@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-export default function Disc({ track }) {
+export default function Disc({ track }: { track: { id: string; name: string; artists: string[]; image: string; url: string } }) {
     return (
         <a
             href={track.url}

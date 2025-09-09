@@ -32,7 +32,7 @@ export default function Works() {
                             <div key={index} className="">
                                 <Card
                                     thumbnail={work?.thumbnail || null}
-                                    title={work?.title || null}
+                                    title={work?.title || "N/A"}
                                     link={work?.link || null}
                                     featured={work?.featured || false}
                                     tags={work?.role || []}

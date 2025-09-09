@@ -1,7 +1,7 @@
 import { AspectRatio } from "../ui/aspect-ratio";
 import Image from "next/image";
 
-export default function Card({ title, thumbnail, link, featured, tags }) {
+export default function Card({ title, thumbnail, link, featured, tags }: { title: string; thumbnail?: string; link?: string; featured?: boolean; tags?: string[] }) {
     const CardContent = (
         <div className="group overflow-hidden rounded-lg bg-zinc-900 transition-transform duration-200 hover:scale-105">
             <AspectRatio ratio={16 / 9} className="relative overflow-hidden">

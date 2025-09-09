@@ -1,8 +1,8 @@
-function getFullYear(): number {
+export function getFullYear(): number {
     return new Date().getFullYear();
 }
 
-function getDayCount(): number {
+export function getDayCount(): number {
     const start = new Date("2004-11-13");
     const today = new Date();
 
@@ -11,5 +11,3 @@ function getDayCount(): number {
 
     return diffDays;
 }
-
-export { getFullYear, getDayCount };
