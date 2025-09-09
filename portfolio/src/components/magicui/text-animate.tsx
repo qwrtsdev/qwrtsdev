@@ -1,8 +1,74 @@
-"use client";;
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
+"use client";
 
-const staggerTimings = {
+import { cn } from "@/lib/utils";
+import { AnimatePresence, motion, MotionProps, Variants } from "motion/react";
+import { ElementType, memo } from "react";
+
+type AnimationType = "text" | "word" | "character" | "line";
+type AnimationVariant =
+  | "fadeIn"
+  | "blurIn"
+  | "blurInUp"
+  | "blurInDown"
+  | "slideUp"
+  | "slideDown"
+  | "slideLeft"
+  | "slideRight"
+  | "scaleUp"
+  | "scaleDown";
+
+interface TextAnimateProps extends MotionProps {
+  /**
+   * The text content to animate
+   */
+  children: string;
+  /**
+   * The class name to be applied to the component
+   */
+  className?: string;
+  /**
+   * The class name to be applied to each segment
+   */
+  segmentClassName?: string;
+  /**
+   * The delay before the animation starts
+   */
+  delay?: number;
+  /**
+   * The duration of the animation
+   */
+  duration?: number;
+  /**
+   * Custom motion variants for the animation
+   */
+  variants?: Variants;
+  /**
+   * The element type to render
+   */
+  as?: ElementType;
+  /**
+   * How to split the text ("text", "word", "character")
+   */
+  by?: AnimationType;
+  /**
+   * Whether to start animation when component enters viewport
+   */
+  startOnView?: boolean;
+  /**
+   * Whether to animate only once
+   */
+  once?: boolean;
+  /**
+   * The animation preset to use
+   */
+  animation?: AnimationVariant;
+  /**
+   * Whether to enable accessibility features (default: true)
+   */
+  accessible?: boolean;
+}
+
+const staggerTimings: Record<AnimationType, number> = {
   text: 0.06,
   word: 0.05,
   character: 0.03,
@@ -27,7 +93,7 @@ const defaultContainerVariants = {
   },
 };
 
-const defaultItemVariants = {
+const defaultItemVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -37,7 +103,10 @@ const defaultItemVariants = {
   },
 };
 
-const defaultItemAnimationVariants = {
+const defaultItemAnimationVariants: Record<
+  AnimationVariant,
+  { container: Variants; item: Variants }
+> = {
   fadeIn: {
     container: defaultContainerVariants,
     item: {
@@ -232,7 +301,7 @@ const defaultItemAnimationVariants = {
   },
 };
 
-export function TextAnimate({
+const TextAnimateBase = ({
   children,
   delay = 0,
   duration = 0.3,
@@ -244,11 +313,12 @@ export function TextAnimate({
   once = false,
   by = "word",
   animation = "fadeIn",
+  accessible = true,
   ...props
-}) {
+}: TextAnimateProps) => {
   const MotionComponent = motion.create(Component);
 
-  let segments = [];
+  let segments: string[] = [];
   switch (by) {
     case "word":
       segments = children.split(/(\s+)/);
@@ -311,16 +381,19 @@ export function TextAnimate({
       : { container: defaultContainerVariants, item: defaultItemVariants };
 
   return (
-    (<AnimatePresence mode="popLayout">
+    <AnimatePresence mode="popLayout">
       <MotionComponent
-        variants={finalVariants.container}
+        variants={finalVariants.container as Variants}
         initial="hidden"
         whileInView={startOnView ? "show" : undefined}
         animate={startOnView ? undefined : "show"}
         exit="exit"
         className={cn("whitespace-pre-wrap", className)}
         viewport={{ once }}
-        {...props}>
+        aria-label={accessible ? children : undefined}
+        {...props}
+      >
+        {accessible && <span className="sr-only">{children}</span>}
         {segments.map((segment, i) => (
           <motion.span
             key={`${by}-${segment}-${i}`}
@@ -329,12 +402,17 @@ export function TextAnimate({
             className={cn(
               by === "line" ? "block" : "inline-block whitespace-pre",
               by === "character" && "",
-              segmentClassName
-            )}>
+              segmentClassName,
+            )}
+            aria-hidden={accessible ? true : undefined}
+          >
             {segment}
           </motion.span>
         ))}
       </MotionComponent>
-    </AnimatePresence>)
+    </AnimatePresence>
   );
-}
+};
+
+// Export the memoized version
+export const TextAnimate = memo(TextAnimateBase);
