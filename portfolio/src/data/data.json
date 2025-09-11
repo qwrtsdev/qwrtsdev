@@ -5,43 +5,43 @@
             "thumbnail": "/images/sunnyhellgate-project.jpg",
             "link": "https://youtu.be/wByxPzKhJt8",
             "featured": true,
-            "role": ["Video Editor"]
+            "roles": "Video Editor"
         },
         {
             "title": "Toyota Pithan Hatyai",
             "thumbnail": "/images/toyotapithan.jpg",
             "link": "https://g.co/kgs/du2FsNL",
-            "role": ["IT / Programmer (Intern)"]
+            "roles": "IT / Programmer (Intern)"
         },
         {
             "title": "Swipify React",
             "thumbnail": "/images/swipify-react.webp",
             "link": "https://github.com/qwrtsdev/swipify-react",
-            "role": ["Contributor"]
+            "roles": "Contributor"
         },
         {
-            "title": "KMUTNB ECE Utilities Bot",
+            "title": "KMUTNB ENG Utilities Bot",
             "thumbnail": "/images/ece-utils.png",
             "link": "https://github.com/qwrtsdev/ece-utils",
-            "role": ["Contributor"]
+            "roles": "Contributor"
         },
         {
             "title": "YWC20 Homework",
             "thumbnail": "/images/ywc20.jpg",
             "link": "https://github.com/qwrtsdev/ywc20-homework",
-            "role": ["Contributor"]
+            "roles": "Contributor"
         },
         {
             "title": "QwrtsArchive",
             "thumbnail": "/images/qwrtsarchive.jpg",
             "link": "https://www.youtube.com/@qwrtsarchive",
-            "role": ["Old YouTube Channel"]
+            "roles": "YouTube"
         },
         {
             "title": "GameFiend",
             "thumbnail": "/images/gamefiend.png",
             "link": "https://www.facebook.com/gamefiendmedia",
-            "role": ["Founder / Community Manager"]
+            "roles": "Founder / Community Manager"
         }
     ]
 }

@@ -1,4 +1,4 @@
-import Card from "@/components/global/Card";
+import WorkCard from "@/components/global/WorkCard";
 import Footer from "@/components/global/Footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -27,15 +27,15 @@ export default function Works() {
                         </Link>
                     </div>
 
-                    <div className="grid grid-cols-1 grid-rows-3 gap-6 border-t border-zinc-300 p-6 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
+                    <div className="grid grid-cols-1 grid-rows-1 gap-6 border-t border-zinc-300 p-6 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
                         {works.map((work, index) => (
                             <div key={index} className="">
-                                <Card
-                                    thumbnail={work?.thumbnail || null}
-                                    title={work?.title || "N/A"}
-                                    link={work?.link || null}
-                                    featured={work?.featured || false}
-                                    tags={work?.role || []}
+                                <WorkCard
+                                    title={work.title}
+                                    thumbnail={work.thumbnail}
+                                    link={work.link}
+                                    featured={work.featured}
+                                    roles={work.roles}
                                 />
                             </div>
                         ))}

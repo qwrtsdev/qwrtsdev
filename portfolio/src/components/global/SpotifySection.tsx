@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, LoaderCircle } from "lucide-react";
+import { Track } from "@/types/spotify";
 
 export default function SpotifySection() {
-    const [tracks, setTracks] = useState([]);
-    const [selected, setSelected] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [tracks, setTracks] = useState<Track[]>([]);
+    const [selected, setSelected] = useState<Track | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         fetch(

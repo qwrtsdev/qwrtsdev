@@ -1,7 +1,8 @@
 import { AspectRatio } from "../ui/aspect-ratio";
 import Image from "next/image";
+import { Works } from "@/types/works";
 
-export default function Card({ title, thumbnail, link, featured, tags }: { title: string; thumbnail?: string; link?: string; featured?: boolean; tags?: string[] }) {
+export default function WorkCard({ title, thumbnail, link, roles, featured }: Works) {
     const CardContent = (
         <div className="group overflow-hidden rounded-lg bg-zinc-900 transition-transform duration-200 hover:scale-105">
             <AspectRatio ratio={16 / 9} className="relative overflow-hidden">
@@ -24,8 +25,9 @@ export default function Card({ title, thumbnail, link, featured, tags }: { title
                         <Image
                             src="/icons/newtab-icon.svg"
                             alt="New Tab Icon"
-                            className="drop-shadow-black h-4 w-4 opacity-0 drop-shadow-lg transition-opacity duration-200 group-hover:opacity-100"
-                            fill
+                            width={16}
+                            height={16}
+                            className="opacity-0 drop-shadow-lg transition-opacity duration-200 group-hover:opacity-100"
                         />
                     </span>
                 )}
@@ -33,18 +35,14 @@ export default function Card({ title, thumbnail, link, featured, tags }: { title
 
             <div className="p-4">
                 <p className="overflow-hidden text-ellipsis whitespace-nowrap text-sm font-semibold text-zinc-50">
-                    {title || "N/A"}
+                    {title}
                 </p>
 
-                {tags && (
-                    <span className="flex flex-wrap gap-2 pt-1 text-zinc-400">
-                        {tags.map((tag, index) => (
-                            <span key={index} className="text-xs font-light">
-                                {tag}
-                            </span>
-                        ))}
+                <span className="overflow-hidden text-ellipsis whitespace-nowrap flex flex-wrap gap-2 pt-1 text-zinc-400 min-h-[1.25rem]">
+                    <span className="text-xs font-light">
+                        {roles}
                     </span>
-                )}
+                </span>
             </div>
         </div>
     );
@@ -54,7 +52,6 @@ export default function Card({ title, thumbnail, link, featured, tags }: { title
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="block"
         >
             {CardContent}
         </a>

@@ -1,4 +1,4 @@
-import Card from "@/components/global/Card";
+import WorkCard from "@/components/global/WorkCard";
 import SpotifySection from "@/components/global/SpotifySection";
 import { Marquee } from "@/components/magicui/marquee";
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -17,7 +17,7 @@ export default async function Home() {
     const dayCount = getDayCount();
     const girlfriend = 0;
     const yearOld = getFullYear() - 2004;
-    const topThreeWorks = works.slice(0, 3);
+    const threeWorks = works.slice(0, 3);
 
     return (
         <main className="h-full items-center justify-center bg-zinc-50 text-zinc-900">
@@ -215,21 +215,21 @@ export default async function Home() {
                         </div>
                     </div>
 
-                    {/* Showcases */}
+                    {/* Work Showcases */}
                     <div>
                         <p className="py-4 text-center text-lg font-bold text-zinc-900">
                             ผลงานต่างๆ
                         </p>
 
-                        <div className="grid grid-cols-1 grid-rows-3 gap-4 px-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
-                            {topThreeWorks.map((work, index) => (
+                        <div className="grid grid-cols-1 grid-rows-1 gap-4 px-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
+                            {threeWorks.map((work, index) => (
                                 <div key={index} className="">
-                                    <Card
-                                        thumbnail={work?.thumbnail || null}
-                                        title={work?.title || "N/A"}
-                                        link={work?.link || null}
-                                        featured={work?.featured || false}
-                                        tags={work?.role || []}
+                                    <WorkCard
+                                        title={work.title}
+                                        thumbnail={work.thumbnail}
+                                        link={work.link}
+                                        featured={work.featured}
+                                        roles={work.roles}
                                     />
                                 </div>
                             ))}
@@ -249,7 +249,7 @@ export default async function Home() {
                         </Link>
                     </div>
 
-                    {/* Tastes */}
+                    {/* Music Tastes */}
                     <SpotifySection />
 
                     {/* Connection */}

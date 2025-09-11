@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Track } from "@/types/spotify";
 
-export default function Disc({ track }: { track: { id: string; name: string; artists: string[]; image: string; url: string } }) {
+export default function SpotifyCard({ track }: { track: Track }) {
     return (
         <a
             href={track.url}

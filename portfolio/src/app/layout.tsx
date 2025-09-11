@@ -21,7 +21,7 @@ const LineSeed = localFont({
 export const metadata = {
     title: {
         default: "QWRTSDEV",
-        template: "%s | QWRTSDEV",
+        template: "%s | QWRTS",
     },
     description:
         "A passionate programmer and graphic designer. Who wants to create well-crafted softwares that seamlessly blends functionality with aesthetics.",
@@ -50,7 +50,7 @@ export const metadata = {
     },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
             <body

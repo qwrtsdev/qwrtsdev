@@ -4,12 +4,13 @@ import Footer from "@/components/global/Footer";
 import Link from "next/link";
 import { Music, ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
-import Disc from "@/components/global/Disc";
+import Disc from "@/components/global/SpotifyCard";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Track } from "@/types/spotify";
 
 export default function Songs() {
-    const [tracks, setTracks] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [tracks, setTracks] = useState<Track[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         fetch(
@@ -40,7 +41,7 @@ export default function Songs() {
                   </div>
               </div>
           ))
-        : tracks.map((t) => <Disc key={t.id} track={t} />);
+        : tracks.map((trackInfo) => <Disc key={trackInfo.id} track={trackInfo} />);
 
     return (
         <div className="h-full items-center justify-center">

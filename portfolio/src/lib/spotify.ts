@@ -1,7 +1,8 @@
 import axios, { AxiosResponse } from "axios";
+import React from "react";
 
-let accessToken: string | null;
-let tokenExpiresAt: number | null;
+let accessToken: string;
+let tokenExpiresAt: number;
 
 export async function getSpotifyToken(): Promise<string> {
     const now: number = Date.now();
@@ -12,9 +13,8 @@ export async function getSpotifyToken(): Promise<string> {
 
     const resp: AxiosResponse = await axios.post(
         "https://accounts.spotify.com/api/token",
-        
+
         new URLSearchParams({ grant_type: "client_credentials" }),
-        
         {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
@@ -30,3 +30,13 @@ export async function getSpotifyToken(): Promise<string> {
 
     return accessToken;
 }
+
+export const getSpotifyPlaylist = React.cache(() => {
+    return axios
+        .get("https://api.spotify.com/v1/playlists/" + process.env.NEXT_PUBLIC_SPOTIFY_PLAYLIST_ID, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+            },
+        })
+        .then((res) => res.data);
+})
