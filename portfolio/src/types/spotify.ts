@@ -5,12 +5,3 @@ export interface Track {
     image?: string;
     url?: string;
 }
-
-export interface SpotifyPlaylistResponse {
-    tracks: Track[];
-}
-
-export interface SpotifyApiError {
-    error: string;
-    details?: any;
-}

@@ -1,5 +1,4 @@
 import axios, { AxiosResponse } from "axios";
-import React from "react";
 
 let accessToken: string;
 let tokenExpiresAt: number;
@@ -30,13 +29,3 @@ export async function getSpotifyToken(): Promise<string> {
 
     return accessToken;
 }
-
-export const getSpotifyPlaylist = React.cache(() => {
-    return axios
-        .get("https://api.spotify.com/v1/playlists/" + process.env.NEXT_PUBLIC_SPOTIFY_PLAYLIST_ID, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            },
-        })
-        .then((res) => res.data);
-})
