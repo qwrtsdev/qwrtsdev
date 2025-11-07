@@ -1,31 +1,21 @@
-<h1 align="center">
-Hello 👋🏻, I'm <a href="https://www.facebook.com/dumbqwrts" target="_blank">Nuttapong Nakawirot</a>
-</h1>
+# QWRTSDEV
 
-A student majoring in Information Technology at Hatyai Technical College, passionate about programming and graphic design. My goal is to create well-crafted software that seamlessly blends functionality with aesthetics.
+> **“QWERTY” (/ˈkwɜːrti/) — noun** <br/>
+> 
+> A keyboard layout for Latin-script alphabets; Originally designed for typewriters in the 1870s by Christopher Latham Sholes, the layout was intended to reduce jamming by spacing out commonly used letter pairs. ([Wikipedia](https://en.wikipedia.org/wiki/QWERTY))
 
-💡 Junior Front-end Developer<br/>
-📍 Songkhla, Thailand<br/>
-💻 Currently unemployed :(
+A student majoring in Computer Engineering at King Mongkut's University of Technology North Bangkok who always struggling in his own spagetti code (he's regretted it.)
 
----
-
-### 💼 Skills & Proficiencies :
-- **Programming:** 2 years of coding experience, Primarily focused on front-end web development and constantly learning new technologies.
-- **Graphic:** 5+ years of experience in Graphic Designing and Video Editing, with a personal YouTube channel.
-- **Internship:** I'm currently a Software Development Intern at Toyota Phithan Hatyai.
-
-[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,php,js,nodejs,react,nextjs,discordjs,firebase,mysql,sqlite,md,ps,ai,pr,figma,npm,postman,git,github,vercel,vscode,visualstudio&perline=10)](https://skillicons.dev)
+📍 Bangkok, Thailand
 
 ---
 
-### 📧 Contact Me :
-- **Facebook:** [Nuttapong Nakawirot](https://www.facebook.com/dumbqwrts/)
-- **LinkedIn:** [qwrtsdev](https://www.linkedin.com/in/qwrtsdev/)
-- **Discord:** [dumbqwrts](https://discord.com/users/824442267318222879)
-- **The Dev's Desk:** [discord.gg/JKsYSd4TVf](https://discord.gg/JKsYSd4TVf)
+- [Personal Website](https://qwrtsdev.xyz)
+- [Social Bio Links](https://me.qwrtsdev.xyz)
+- [My Blogs](https://blog.qwrtsdev.xyz)
+- [The Dev's Desk Community](https://discord.gg/JKsYSd4TVf)
+- [My Spotify Profile](https://open.spotify.com/user/31a3dekwt2rh4qh5dv2enzfbz2ji)
 
 ---
 
-- [Spotify Profile](https://open.spotify.com/user/31a3dekwt2rh4qh5dv2enzfbz2ji)
-- [My Frank Ocean Playlist](https://open.spotify.com/playlist/2RWAIndrRw5FDYFAYyIHzL?si=OlL5Bg8oSnWcR1ugqj78uA)
+[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,php,js,ts,py,nodejs,bun,react,nextjs,astro,supabase,mongodb,mysql,express,elysia,md,npm,postman,git,docker,github,vercel,vscode,discordjs,p5js,processing,ps,ai,pr,figma&perline=10)]()

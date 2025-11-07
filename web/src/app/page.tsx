@@ -138,7 +138,7 @@ export default async function Home() {
                             <span className="text-sm">
                                 <p>
                                     <Image
-                                        alt="อยากจะร้องไห้"
+                                        alt=""
                                         width="18"
                                         height="18"
                                         src="/emojis/round_pushpin.png"
