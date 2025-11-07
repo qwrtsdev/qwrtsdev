@@ -18,4 +18,4 @@ A student majoring in Computer Engineering at King Mongkut's University of Techn
 
 ---
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,php,js,ts,py,nodejs,bun,react,nextjs,astro,supabase,mongodb,mysql,express,elysia,md,npm,postman,git,docker,github,vercel,vscode,discordjs,p5js,processing,ps,ai,pr,figma&perline=10)]()
+[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,php,js,ts,py,nodejs,bun,react,nextjs,astro,supabase,mongodb,mysql,express,elysia,md,npm,postman,git,docker,github,vercel,vscode,discordjs,p5js,processing,ps,ai,pr,figma&perline=15)]()
