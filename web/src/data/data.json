@@ -1,47 +1,69 @@
 {
-    "works": [
-        {
-            "title": "หนุ่มทรงSAD แห่งดินแดนDiscord #เดี่ยวซันสั้น",
-            "thumbnail": "/images/sunnyhellgate-project.jpg",
-            "link": "https://youtu.be/wByxPzKhJt8",
-            "featured": true,
-            "roles": "Video Editor"
-        },
-        {
-            "title": "Toyota Pithan Hatyai",
-            "thumbnail": "/images/toyotapithan.jpg",
-            "link": "https://g.co/kgs/du2FsNL",
-            "roles": "IT / Programmer (Intern)"
-        },
-        {
-            "title": "Swipify React",
-            "thumbnail": "/images/swipify-react.webp",
-            "link": "https://github.com/qwrtsdev/swipify-react",
-            "roles": "Contributor"
-        },
-        {
-            "title": "KMUTNB ENG Utilities Bot",
-            "thumbnail": "/images/ece-utils.png",
-            "link": "https://github.com/qwrtsdev/ece-utils",
-            "roles": "Contributor"
-        },
-        {
-            "title": "YWC20 Homework",
-            "thumbnail": "/images/ywc20.jpg",
-            "link": "https://github.com/qwrtsdev/ywc20-homework",
-            "roles": "Contributor"
-        },
-        {
-            "title": "QwrtsArchive",
-            "thumbnail": "/images/qwrtsarchive.jpg",
-            "link": "https://www.youtube.com/@qwrtsarchive",
-            "roles": "YouTube"
-        },
-        {
-            "title": "GameFiend",
-            "thumbnail": "/images/gamefiend.png",
-            "link": "https://www.facebook.com/gamefiendmedia",
-            "roles": "Founder / Community Manager"
-        }
-    ]
+  "works": [
+    {
+      "title": "หนุ่มทรงSAD แห่งดินแดนDiscord #เดี่ยวซันสั้น",
+      "thumbnail": "/images/sunnyhellgate-project.jpg",
+      "link": "https://youtu.be/wByxPzKhJt8",
+      "featured": true,
+      "roles": "Video Editor"
+    },
+    {
+      "title": "Toyota Pithan Hatyai",
+      "thumbnail": "/images/toyotapithan.jpg",
+      "link": "https://g.co/kgs/du2FsNL",
+      "roles": "IT / Programmer (Intern)"
+    },
+    {
+      "title": "Swipify React",
+      "thumbnail": "/images/swipify-react.webp",
+      "link": "https://github.com/qwrtsdev/swipify-react",
+      "roles": "Contributor"
+    },
+    {
+      "title": "KMUTNB ENG Utilities Bot",
+      "thumbnail": "/images/ece-utils.png",
+      "link": "https://github.com/qwrtsdev/ece-utils",
+      "roles": "Contributor"
+    },
+    {
+      "title": "YWC20 Homework",
+      "thumbnail": "/images/ywc20.jpg",
+      "link": "https://github.com/qwrtsdev/ywc20-homework",
+      "roles": "Contributor"
+    },
+    {
+      "title": "QwrtsArchive",
+      "thumbnail": "/images/qwrtsarchive.jpg",
+      "link": "https://www.youtube.com/@qwrtsarchive",
+      "roles": "YouTube"
+    },
+    {
+      "title": "GameFiend",
+      "thumbnail": "/images/gamefiend.png",
+      "link": "https://www.facebook.com/gamefiendmedia",
+      "roles": "Founder / Community Manager"
+    }
+  ],
+  "socials": [
+    {
+      "url": "https://github.com/qwrtsdev",
+      "icon": "fa7-brands:github"
+    },
+    {
+      "url": "https://www.linkedin.com/in/qwrtsdev/",
+      "icon": "fa7-brands:linkedin"
+    },
+    {
+      "url": "https://youtube.com/qwertyx",
+      "icon": "fa7-brands:youtube"
+    },
+    {
+      "url": "https://tiktok.com/@sillyqwrts",
+      "icon": "fa7-brands:tiktok"
+    },
+    {
+      "url": "https://instagram.com/qwrrrrts",
+      "icon": "fa7-brands:instagram"
+    }
+  ]
 }
