@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
+    // "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
     "target": "ES2017",
     "lib": [
@@ -17,21 +20,25 @@
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "plugins": [
       {
         "name": "next"
       }
-    ],
+    ]
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx", "src/app/(pages)/works/page.jsx", "src/app/api/tracks/route.js",  ],
+    "**/*.tsx",
+    "src/app/(pages)/works/page.jsx",
+    "src/app/api/tracks/route.js",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
