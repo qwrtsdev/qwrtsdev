@@ -13,9 +13,7 @@ A student majoring in Computer Engineering at King Mongkut's University of Techn
 - [Personal Website](https://qwrtsdev.xyz)
 - [Social Bio Links](https://me.qwrtsdev.xyz)
 - [My Blogs](https://blog.qwrtsdev.xyz)
-- [The Dev's Desk Community](https://discord.gg/JKsYSd4TVf)
-- [My Spotify Profile](https://open.spotify.com/user/31a3dekwt2rh4qh5dv2enzfbz2ji)
 
 ---
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,php,js,ts,py,nodejs,bun,react,nextjs,astro,supabase,mongodb,mysql,express,elysia,md,npm,postman,git,docker,github,vercel,vscode,discordjs,p5js,processing,ps,ai,pr,figma&perline=15)]()
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,py,php,dart,bash,md,react,nextjs,astro,vite,tailwind,bootstrap,p5js,processing,flutter,nodejs,bun,express,elysia,discordjs,supabase,mongodb,mysql,docker,cloudflare,vercel,git,github,npm,postman,linux,arch,vscode,neovim,figma,ps,ai,pr&perline=15)]()
