@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+/* Design tokens: see DESIGN.md (source: Figma "Reference" page, www.varkaria.works frame). */
+@theme {
+  --color-page: #fafafa;
+  --color-surface: #ffffff;
+  --color-border: #f3f3f3;
+  --color-rule: #f1f1f1;
+  --color-ink: #4e4e4e;
+  --color-muted: #9b9b9b;
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 8px;
+  --radius-media: 6px;
+
+  --container-page: 720px;
+  --container-content: 688px;
+}
+
+@layer base {
+  body {
+    @apply bg-page font-sans text-sm text-muted antialiased;
+  }
+}
+
+/* White box with hairline border; the building block of every section. */
+@utility card {
+  @apply rounded-card border border-border bg-surface px-5 py-4;
+}
+
+/* Full-bleed dashed divider between sections. */
+@utility rule {
+  @apply h-px border-0 border-t border-dashed border-rule;
+}
