@@ -1,0 +1,12 @@
+{
+  "name": "qwrtsdev",
+  "desc": "เป็นโปรแกรมเมอร์ ครีเอเตอร์ แล้วก็นักเติมแมว 🐈",
+  "image": "/assets/pfp.png",
+
+  "credits": {
+    "info": {
+      "enabled": true,
+      "repo": "https://github.com/qwrtsdev/qwrtsdev-me"
+    }
+  }
+}

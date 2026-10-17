@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "LINESeedSansTH_W_Rg";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/LINESeedSansTH_W_Rg.woff2") format("woff2");
+}
+
+@theme {
+  --font-line: "LINESeedSansTH_W_Rg", "sans-serif";
+}
+
+@keyframes shine {
+  0% {
+      left: -75%;
+  }
+  100% {
+      left: 125%;
+  }
+}

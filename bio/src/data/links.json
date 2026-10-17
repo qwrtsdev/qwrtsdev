@@ -1,0 +1,98 @@
+[
+  {
+    "header": "ขอแนะนำ",
+    "items": [
+        {
+            "title": "Discord",
+            "desc": "เข้าร่วมคอมมูนิตี้พูดคุยกับคนอื่นๆ เรื่องเกม และเขียนโค้ด",
+            "link": "https://discord.gg/7pt63KJEvu",
+            "thumbnail": "/assets/discord-logo.png",
+            "featured": true
+        }
+    ]
+  },
+  {
+    "header": "การสนับสนุน",
+    "items": [
+        {
+            "title": "EasyDonate",
+            "desc": "โดเนทขึ้นจอสตรีม (ขั้นต่ำ 5 บาท / ขึ้นดิสคอร์ด)",
+            "link": "https://easydonate.app/qwertyx",
+            "thumbnail": "/assets/easydonate-logo.jpg",
+            "featured": true
+        },
+        {
+            "title": "Ko-fi",
+            "desc": "สนับสนุนผมผ่าน Ko-fi (ขั้นต่ำ 10 บาท / ขึ้นดิสคอร์ด)",
+            "link": "https://ko-fi.com/qwrts",
+            "thumbnail": "/assets/kofi-logo.png",
+            "featured": false
+        }
+    ]
+  },
+  {
+    "header": "ติดต่องาน",
+    "items": [
+      {
+        "title": "LinkedIn",
+        "desc": "ดูโปรไฟล์ด้านการทำงาน",
+        "link": "https://www.linkedin.com/in/qwrtsdev/",
+        "thumbnail": "/assets/linkedIn_icon.webp"
+      },
+      {
+        "title": "Fastwork",
+        "desc": "จ้างงานฟรีแลนซ์",
+        "link": "https://www.fastwork.co/qwrts",
+        "thumbnail": "/assets/fastwork-logo.png"
+      }
+    ]
+  },
+  {
+    "header": "ช่องทางโซเชียล",
+    "items": [
+        {
+            "title": "GitHub",
+            "desc": "ผลงานโปรแกรมโอเพ่นซอร์สต่างๆ",
+            "link": "https://github.com/qwrtsdev",
+            "thumbnail": "/assets/github-logo.png",
+            "featured": true
+        },
+        {
+            "title": "YouTube",
+            "desc": "รวมคลิปวิดีโอการเล่นเกม / โค้ด แบบยาว",
+            "link": "https://youtube.com/qwertyx",
+            "thumbnail": "/assets/youtube-logo.png"
+        },
+        {
+            "title": "TikTok",
+            "desc": "รวมคลิป Shorts วิดีโอทั้งหมด",
+            "link": "https://tiktok.com/@sillyqwrts",
+            "thumbnail": "/assets/tiktok-logo.jpg",
+            "featured": true
+        },
+        {
+            "title": "Instagram",
+            "desc": "ติดตามชีวิตประจำวันของผม",
+            "link": "https://instagram.com/qwrrrrts",
+            "thumbnail": "/assets/instagram-logo.png"
+        }
+    ]
+  },
+  {
+    "header": "พื้นที่ฟังเพลง",
+    "items": [
+        {
+            "title": "Spotify",
+            "desc": "เพลย์ลิสต์เพลงที่ผมชอบฟัง (mainstream)",
+            "link": "https://open.spotify.com/user/31a3dekwt2rh4qh5dv2enzfbz2ji",
+            "thumbnail": "/assets/spotify.png"
+        },
+        {
+            "title": "Soundcloud",
+            "desc": "เพลย์ลิสต์เพลงที่ผมชอบฟัง (unreleases)",
+            "link": "https://soundcloud.com/qwrrrrts",
+            "thumbnail": "/assets/soundcloud.jpg"
+        }
+    ]
+  }
+]
