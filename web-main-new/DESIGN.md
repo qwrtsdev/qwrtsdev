@@ -10,7 +10,7 @@ Tokens live in `src/styles/global.css` (`@theme`), so every value below is a Tai
 | `--color-page` | `#fafafa` | `bg-page` | Page background |
 | `--color-surface` | `#ffffff` | `bg-surface` | Card fill |
 | `--color-border` | `#f3f3f3` | `border-border` | Card hairline (1px solid) |
-| `--color-rule` | `#f1f1f1` | `border-rule` | Dashed dividers and container rails |
+| `--color-rule` | `#e0e0e0` (Figma: `#f1f1f1`, darkened for visibility) | `border-rule` | Dashed dividers and container rails |
 | `--color-ink` | `#4e4e4e` | `text-ink` | Emphasis: headings, lead phrase, links |
 | `--color-muted` | `#9b9b9b` | `text-muted` | Body text, meta, dates (default) |
 | `--font-sans` | Geist 400 / 500 | `font-sans` | Only typeface |
