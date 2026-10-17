@@ -1,0 +1,136 @@
+---
+import "../styles/global.css";
+import Warning from "../../assets/warning.svg";
+
+const fullYear = new Date().getFullYear();
+
+const socials = [
+	{
+		name: "GitHub",
+		url: "https://github.com/qwrtsdev",
+		icon: "fa7-brands:github",
+	},
+	{
+		name: "LinkedIn",
+		url: "https://www.linkedin.com/in/qwrtsdev/",
+		icon: "fa7-brands:linkedin",
+	},
+	{
+		name: "YouTube",
+		url: "https://youtube.com/qwertyx",
+		icon: "fa7-brands:youtube",
+	},
+	{
+		name: "TikTok",
+		url: "https://tiktok.com/@sillyqwrts",
+		icon: "fa7-brands:tiktok",
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com/qwrrrrts",
+		icon: "fa7-brands:instagram",
+	},
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Under Construction.</title>
+	</head>
+	<body>
+		<div class="flex min-h-screen items-center justify-center p-4">
+			<div
+				class="flex w-full max-w-page flex-col gap-8 border-2 border-dashed border-rule p-4"
+			>
+				<main>
+					<div
+						class="card relative overflow-hidden py-10 text-center"
+					>
+						<Warning
+							aria-hidden="true"
+							width={200}
+							height={200}
+							class="pointer-events-none absolute -right-12 top-1/2 -translate-y-1/2 rotate-12 text-muted/25 [&_path]:stroke-current"
+						/>
+						<p
+							class="relative text-xl font-medium tracking-tight text-ink"
+						>
+							อยู่ในระหว่างการก่อสร้าง
+						</p>
+						<p class="relative mt-1">
+							หน้าเว็บไซต์ใหม่กำลังจะมา เร็วๆนี้!
+						</p>
+					</div>
+				</main>
+
+				<footer
+					class="w-full flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0 select-none"
+				>
+					<div class="w-full flex flex-col text-xs gap-1">
+						<div class="flex flex-row">
+							<p class="text-neutral-900">
+								© {fullYear} qwrtsdev. All rights reserved.
+							</p>
+							<a
+								href="https://webring.wonderful.software/#qwrtsdev.xyz"
+								title="วงแหวนเว็บ"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									alt="วงแหวนเว็บ"
+									width="18"
+									height="18"
+									src="https://webring.wonderful.software/webring.black.svg"
+									class="ml-2 transition-transform duration-200 hover:rotate-12 hover:scale-125"
+								/>
+							</a>
+						</div>
+						<div class="flex flex-row gap-2 text-neutral-500">
+							<a href="https://qwrts.dev" target="_blank"
+								>พอร์ตโฟลิโอ</a
+							>
+							|
+							<a href="https://blog.qwrts.dev" target="_blank"
+								>บล็อก</a
+							>
+							|
+							<a href="https://status.qwrts.dev" target="_blank"
+								>สถานะ</a
+							>
+						</div>
+					</div>
+
+					<div class="flex flex-row gap-3 items-center">
+						{
+							socials.map((social) => (
+								<a
+									href={social.url}
+									target="_blank"
+									class="text-neutral-900"
+								>
+									<img
+										src={`https://api.iconify.design/${social.icon}.svg`}
+										alt={social.name}
+										class="w-[2em] h-[2em]"
+									/>
+								</a>
+							))
+						}
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
