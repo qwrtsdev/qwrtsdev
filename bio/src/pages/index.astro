@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LinkItems from "../components/LinkItems.astro";
+
+import config from "../data/config.json" with { type: "json" };
+import socials from "../data/socials.json" with { type: "json" };
+import links from "../data/links.json" with { type: "json" };
+
+const fullYear = new Date().getFullYear();
+---
+
+<BaseLayout>
+    <div class="w-full">
+        <div
+            class="flex flex-col justify-center items-center gap-8 px-4 sm:px-0"
+        >
+            <section class="text-center pt-12 items-center flex flex-col gap-6">
+                <img
+                    src={config.image || "/placeholder-pfp.jpg"}
+                    alt={config.name || "placeholder"}
+                    class="w-full h-auto max-w-[100px] rounded-full shadow-xl border-4 border-neutral-600 object-cover"
+                />
+                <div class="flex flex-col gap-2">
+                    <p class="uppercase font-bold text-4xl">
+                        {config.name || "placeholder"}
+                    </p>
+                    <p class="text-lg text-neutral-500">
+                        {config.desc || "placeholder"}
+                    </p>
+                </div>
+                {
+                    socials ? (
+                        <div class="flex flex-row gap-4 items-center justify-center flex-wrap">
+                            {socials.map((social) => (
+                                <a
+                                    href={social.url}
+                                    target="_blank"
+                                    class="relative group text-neutral-900 text-3xl"
+                                >
+                                    <img
+                                        src={`https://api.iconify.design/${social.icon}.svg`}
+                                        alt={social.name}
+                                        class="w-[1em] h-[1em]"
+                                    />
+                                    <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity w-max bg-neutral-950 text-white text-xs rounded px-2 py-1">
+                                        {social.name}
+                                        <div class="absolute left-1/2 -translate-x-1/2 top-full h-0 w-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-neutral-950" />
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+                    ) : null
+                }
+            </section>
+
+            <section class="max-w-xl w-full flex flex-col gap-8">
+                {
+                    links.map((link) => (
+                        <div class="flex flex-col gap-2">
+                            {link.header ? (
+                                <h3 class="text-sm text-neutral-500/70 bg-neutral-300/70 rounded-md w-max p-2">
+                                    {link.header}
+                                </h3>
+                            ) : null}
+                            {link.items.map((item) => (
+                                <LinkItems
+                                    title={item.title}
+                                    desc={item.desc}
+                                    link={item.link}
+                                    thumbnail={item.thumbnail}
+                                    big_image={item.big_image}
+                                    featured={item.featured}
+                                />
+                            ))}
+                        </div>
+                    ))
+                }
+            </section>
+
+            {
+                config.credits.info.enabled && (
+                    <section class="flex flex-col gap-2 text-center justify-center items-center py-6">
+                        <p class="text-2xl">อยากได้เว็บแบบนี้บ้างเหรอ ?</p>
+                        <a
+                            href={config.credits.info.repo}
+                            class="bg-neutral-800 text-neutral-100 px-4 py-2 rounded-full w-max hover:scale-[1.05] transition-all"
+                            target="_blank"
+                        >
+                            &#128640; สร้างเทมเพลตของคุณ
+                        </a>
+                        <p class="text-xs text-neutral-500">
+                            made with &#128150; by qwrtsdev
+                        </p>
+                    </section>
+                )
+            }
+
+            <footer
+                class="max-w-xl w-full flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0 pb-8 select-none"
+            >
+                <div class="w-full flex flex-col text-xs gap-1">
+                    <div class="flex flex-row">
+                        <p class="text-neutral-900">
+                            © {fullYear}
+                            {config.name}. All rights reserved.
+                        </p>
+                        <a
+                            href="https://webring.wonderful.software/#qwrtsdev.xyz"
+                            title="วงแหวนเว็บ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                alt="วงแหวนเว็บ"
+                                width="18"
+                                height="18"
+                                src="https://webring.wonderful.software/webring.black.svg"
+                                class="ml-2 transition-transform duration-200 hover:rotate-12 hover:scale-125"
+                            />
+                        </a>
+                    </div>
+                    <div class="flex flex-row gap-2 text-neutral-500">
+                        <a href="https://qwrtsdev.xyz" target="_blank"
+                            >พอร์ตโฟลิโอ</a
+                        >
+                        |
+                        <a
+                            href="https://blog.qwrtsdev.xyz/blogs"
+                            target="_blank">บล็อก</a
+                        >
+                        |
+                        <a href="https://status.qwrtsdev.xyz" target="_blank"
+                            >สถานะ</a
+                        >
+                    </div>
+                </div>
+
+                {
+                    socials ? (
+                        <div class="flex flex-row gap-3 items-center">
+                            {socials.map((social) => (
+                                <a
+                                    href={social.url}
+                                    target="_blank"
+                                    class="text-neutral-900"
+                                >
+                                    <img
+                                        src={`https://api.iconify.design/${social.icon}.svg`}
+                                        alt={social.name}
+                                        class="w-[1em] h-[1em]"
+                                    />
+                                </a>
+                            ))}
+                        </div>
+                    ) : null
+                }
+            </footer>
+        </div>
+    </div>
+</BaseLayout>

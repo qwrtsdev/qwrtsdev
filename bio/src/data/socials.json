@@ -1,0 +1,27 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/qwrtsdev",
+    "icon": "fa7-brands:github"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/qwrtsdev/",
+    "icon": "fa7-brands:linkedin"
+  },
+  {
+    "name": "YouTube",
+    "url": "https://youtube.com/qwertyx",
+    "icon": "fa7-brands:youtube"
+  },
+  {
+    "name": "TikTok",
+    "url": "https://tiktok.com/@sillyqwrts",
+    "icon": "fa7-brands:tiktok"
+  },
+  {
+    "name": "Instagram",
+    "url": "https://instagram.com/qwrrrrts",
+    "icon": "fa7-brands:instagram"
+  }
+]
