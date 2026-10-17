@@ -4,11 +4,31 @@ import "../styles/global.css";
 const fullYear = new Date().getFullYear();
 
 const socials = [
-	{ name: "GitHub", url: "https://github.com/qwrtsdev", icon: "fa7-brands:github" },
-	{ name: "LinkedIn", url: "https://www.linkedin.com/in/qwrtsdev/", icon: "fa7-brands:linkedin" },
-	{ name: "YouTube", url: "https://youtube.com/qwertyx", icon: "fa7-brands:youtube" },
-	{ name: "TikTok", url: "https://tiktok.com/@sillyqwrts", icon: "fa7-brands:tiktok" },
-	{ name: "Instagram", url: "https://instagram.com/qwrrrrts", icon: "fa7-brands:instagram" },
+	{
+		name: "GitHub",
+		url: "https://github.com/qwrtsdev",
+		icon: "fa7-brands:github",
+	},
+	{
+		name: "LinkedIn",
+		url: "https://www.linkedin.com/in/qwrtsdev/",
+		icon: "fa7-brands:linkedin",
+	},
+	{
+		name: "YouTube",
+		url: "https://youtube.com/qwertyx",
+		icon: "fa7-brands:youtube",
+	},
+	{
+		name: "TikTok",
+		url: "https://tiktok.com/@sillyqwrts",
+		icon: "fa7-brands:tiktok",
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com/qwrrrrts",
+		icon: "fa7-brands:instagram",
+	},
 ];
 ---
 
@@ -21,17 +41,25 @@ const socials = [
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
 		<title>qwrtsdev</title>
 	</head>
 	<body>
 		<!-- Dashed rails marking the page container -->
-		<div class="pointer-events-none fixed inset-y-0 left-1/2 w-full max-w-page -translate-x-1/2 border-x-2 border-dashed border-rule"></div>
+		<div
+			class="pointer-events-none fixed inset-y-0 left-1/2 w-full max-w-page -translate-x-1/2 border-x-2 border-dashed border-rule"
+		>
+		</div>
 
-		<div class="flex min-h-screen flex-col items-center gap-2.5 px-4">
-			<main class="flex w-full max-w-content flex-1 items-center">
+		<div class="flex min-h-screen flex-col items-center justify-center gap-2.5 px-4">
+			<main class="w-full max-w-content">
 				<p class="card w-full text-center">
-					<span class="font-medium text-ink">under construction.</span> new website is on the way!
+					<span class="font-medium text-ink"
+						>⚠️ under construction.</span
+					> new website is on the way!
 				</p>
 			</main>
 
@@ -61,24 +89,37 @@ const socials = [
 						</a>
 					</div>
 					<div class="flex flex-row gap-2 text-neutral-500">
-						<a href="https://qwrtsdev.xyz" target="_blank">พอร์ตโฟลิโอ</a>
+						<a href="https://qwrtsdev.xyz" target="_blank"
+							>พอร์ตโฟลิโอ</a
+						>
 						|
-						<a href="https://blog.qwrtsdev.xyz/blogs" target="_blank">บล็อก</a>
+						<a
+							href="https://blog.qwrtsdev.xyz/blogs"
+							target="_blank">บล็อก</a
+						>
 						|
-						<a href="https://status.qwrtsdev.xyz" target="_blank">สถานะ</a>
+						<a href="https://status.qwrtsdev.xyz" target="_blank"
+							>สถานะ</a
+						>
 					</div>
 				</div>
 
 				<div class="flex flex-row gap-3 items-center">
-					{socials.map((social) => (
-						<a href={social.url} target="_blank" class="text-neutral-900">
-							<img
-								src={`https://api.iconify.design/${social.icon}.svg`}
-								alt={social.name}
-								class="w-[1em] h-[1em]"
-							/>
-						</a>
-					))}
+					{
+						socials.map((social) => (
+							<a
+								href={social.url}
+								target="_blank"
+								class="text-neutral-900"
+							>
+								<img
+									src={`https://api.iconify.design/${social.icon}.svg`}
+									alt={social.name}
+									class="w-[2em] h-[2em]"
+								/>
+							</a>
+						))
+					}
 				</div>
 			</footer>
 		</div>
