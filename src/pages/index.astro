@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LinkItems from "../components/LinkItems.astro";
-import { Icon } from "astro-icon/components";
 
 import config from "../data/config.json" with { type: "json" };
 import socials from "../data/socials.json" with { type: "json" };
@@ -38,7 +37,11 @@ const fullYear = new Date().getFullYear();
                                     target="_blank"
                                     class="relative group text-neutral-900 text-3xl"
                                 >
-                                    <Icon name={social.icon} class="" />
+                                    <img
+                                        src={`https://api.iconify.design/${social.icon}.svg`}
+                                        alt={social.name}
+                                        class="w-[1em] h-[1em]"
+                                    />
                                     <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity w-max bg-neutral-950 text-white text-xs rounded px-2 py-1">
                                         {social.name}
                                         <div class="absolute left-1/2 -translate-x-1/2 top-full h-0 w-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-neutral-950" />
@@ -141,7 +144,11 @@ const fullYear = new Date().getFullYear();
                                     target="_blank"
                                     class="text-neutral-900"
                                 >
-                                    <Icon name={social.icon} class="" />
+                                    <img
+                                        src={`https://api.iconify.design/${social.icon}.svg`}
+                                        alt={social.name}
+                                        class="w-[1em] h-[1em]"
+                                    />
                                 </a>
                             ))}
                         </div>
