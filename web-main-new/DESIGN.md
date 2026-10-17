@@ -26,11 +26,12 @@ Type scale:
 | Headline (one per page, e.g. a status message) | 20px / 28px, `font-medium`, `tracking-tight`, `text-ink` | `text-xl` |
 | Body, footer, meta | 14px / 20px | `text-sm` (default) |
 
-Within body text, hierarchy comes from weight and color, not size. Icons next to body text are 18px (`size-4.5`).
+Within body text, hierarchy comes from weight and color, not size.
 
 ## Layout
 
 - One centered column, `688px` wide, inside a `720px` container marked by **2px dashed vertical rails** (`border-rule`) running full height.
+  - Short pages (e.g. the under-construction index) instead center everything in the viewport inside a **2px dashed outer box** (`border-rule`, `max-w-page`, 16px padding, 32px gap), with no dividers.
 - Sections stack with a **10px gap** (`gap-2.5`) and are separated by **full-bleed 1px dashed rules** (`.rule`) that cross the rails.
 - Order in the reference: status bar → intro card → image + experience grid (6 cols, 12px gap, 2/4 split) → hobbies card → "Go to blog" button card → footer row.
 - Top/bottom bars are single rows: `justify-between`, muted 14px text, 16–18px monochrome icons spaced 8px.

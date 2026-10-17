@@ -48,81 +48,78 @@ const socials = [
 		<title>qwrtsdev</title>
 	</head>
 	<body>
-		<!-- Dashed rails marking the page container -->
-		<div
-			class="pointer-events-none fixed inset-y-0 left-1/2 w-full max-w-page -translate-x-1/2 border-x-2 border-dashed border-rule"
-		>
-		</div>
-
-		<div class="flex min-h-screen flex-col items-center justify-center gap-2.5 px-4">
-			<main class="w-full max-w-content">
-				<div class="card w-full py-10 text-center">
-					<p class="text-xl font-medium tracking-tight text-ink">
-						⚠️ under construction.
-					</p>
-					<p class="mt-1">new website is on the way!</p>
-				</div>
-			</main>
-
-			<hr class="rule -mx-4 self-stretch" />
-
-			<footer
-				class="max-w-content w-full flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0 select-none"
+		<div class="flex min-h-screen items-center justify-center p-4">
+			<!-- Dashed outer box wrapping card and footer -->
+			<div
+				class="flex w-full max-w-page flex-col gap-8 border-2 border-dashed border-rule p-4"
 			>
-				<div class="w-full flex flex-col text-sm gap-1">
-					<div class="flex flex-row">
-						<p class="text-neutral-900">
-							© {fullYear} qwrtsdev. All rights reserved.
+				<main>
+					<div class="card py-10 text-center">
+						<p class="text-xl font-medium tracking-tight text-ink">
+							⚠️ under construction.
 						</p>
-						<a
-							href="https://webring.wonderful.software/#qwrtsdev.xyz"
-							title="วงแหวนเว็บ"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img
-								alt="วงแหวนเว็บ"
-								width="18"
-								height="18"
-								src="https://webring.wonderful.software/webring.black.svg"
-								class="ml-2 transition-transform duration-200 hover:rotate-12 hover:scale-125"
-							/>
-						</a>
+						<p class="mt-1">new website is on the way!</p>
 					</div>
-					<div class="flex flex-row gap-2 text-neutral-500">
-						<a href="https://qwrtsdev.xyz" target="_blank"
-							>พอร์ตโฟลิโอ</a
-						>
-						|
-						<a
-							href="https://blog.qwrtsdev.xyz/blogs"
-							target="_blank">บล็อก</a
-						>
-						|
-						<a href="https://status.qwrtsdev.xyz" target="_blank"
-							>สถานะ</a
-						>
-					</div>
-				</div>
+				</main>
 
-				<div class="flex flex-row gap-3 items-center">
-					{
-						socials.map((social) => (
+				<footer
+					class="w-full flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0 select-none"
+				>
+					<div class="w-full flex flex-col text-xs gap-1">
+						<div class="flex flex-row">
+							<p class="text-neutral-900">
+								© {fullYear} qwrtsdev. All rights reserved.
+							</p>
 							<a
-								href={social.url}
+								href="https://webring.wonderful.software/#qwrtsdev.xyz"
+								title="วงแหวนเว็บ"
 								target="_blank"
-								class="text-neutral-900"
+								rel="noopener noreferrer"
 							>
 								<img
-									src={`https://api.iconify.design/${social.icon}.svg`}
-									alt={social.name}
-									class="size-4.5"
+									alt="วงแหวนเว็บ"
+									width="18"
+									height="18"
+									src="https://webring.wonderful.software/webring.black.svg"
+									class="ml-2 transition-transform duration-200 hover:rotate-12 hover:scale-125"
 								/>
 							</a>
-						))
-					}
-				</div>
-			</footer>
+						</div>
+						<div class="flex flex-row gap-2 text-neutral-500">
+							<a href="https://qwrtsdev.xyz" target="_blank"
+								>พอร์ตโฟลิโอ</a
+							>
+							|
+							<a
+								href="https://blog.qwrtsdev.xyz/blogs"
+								target="_blank">บล็อก</a
+							>
+							|
+							<a href="https://status.qwrtsdev.xyz" target="_blank"
+								>สถานะ</a
+							>
+						</div>
+					</div>
+
+					<div class="flex flex-row gap-3 items-center">
+						{
+							socials.map((social) => (
+								<a
+									href={social.url}
+									target="_blank"
+									class="text-neutral-900"
+								>
+									<img
+										src={`https://api.iconify.design/${social.icon}.svg`}
+										alt={social.name}
+										class="w-[2em] h-[2em]"
+									/>
+								</a>
+							))
+						}
+					</div>
+				</footer>
+			</div>
 		</div>
 	</body>
 </html>
