@@ -56,19 +56,20 @@ const socials = [
 
 		<div class="flex min-h-screen flex-col items-center justify-center gap-2.5 px-4">
 			<main class="w-full max-w-content">
-				<p class="card w-full text-center">
-					<span class="font-medium text-ink"
-						>⚠️ under construction.</span
-					> new website is on the way!
-				</p>
+				<div class="card w-full py-10 text-center">
+					<p class="text-xl font-medium tracking-tight text-ink">
+						⚠️ under construction.
+					</p>
+					<p class="mt-1">new website is on the way!</p>
+				</div>
 			</main>
 
 			<hr class="rule -mx-4 self-stretch" />
 
 			<footer
-				class="max-w-xl w-full flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0 pb-8 select-none"
+				class="max-w-content w-full flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0 select-none"
 			>
-				<div class="w-full flex flex-col text-xs gap-1">
+				<div class="w-full flex flex-col text-sm gap-1">
 					<div class="flex flex-row">
 						<p class="text-neutral-900">
 							© {fullYear} qwrtsdev. All rights reserved.
@@ -115,7 +116,7 @@ const socials = [
 								<img
 									src={`https://api.iconify.design/${social.icon}.svg`}
 									alt={social.name}
-									class="w-[2em] h-[2em]"
+									class="size-4.5"
 								/>
 							</a>
 						))

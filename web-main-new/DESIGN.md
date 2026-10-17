@@ -19,7 +19,14 @@ Tokens live in `src/styles/global.css` (`@theme`), so every value below is a Tai
 | `--container-page` | `720px` | `max-w-page` | Rail-to-rail width |
 | `--container-content` | `688px` | `max-w-content` | Content column (16px inset from rails) |
 
-Type scale is a single step: **14px / 20px** (`text-sm`). Hierarchy comes from weight and color, never size.
+Type scale:
+
+| Role | Size | Utility |
+|---|---|---|
+| Headline (one per page, e.g. a status message) | 20px / 28px, `font-medium`, `tracking-tight`, `text-ink` | `text-xl` |
+| Body, footer, meta | 14px / 20px | `text-sm` (default) |
+
+Within body text, hierarchy comes from weight and color, not size. Icons next to body text are 18px (`size-4.5`).
 
 ## Layout
 
