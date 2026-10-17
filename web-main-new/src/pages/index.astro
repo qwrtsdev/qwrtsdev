@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Warning from "../../assets/warning.svg";
 
 const fullYear = new Date().getFullYear();
 
@@ -49,16 +50,21 @@ const socials = [
 	</head>
 	<body>
 		<div class="flex min-h-screen items-center justify-center p-4">
-			<!-- Dashed outer box wrapping card and footer -->
 			<div
 				class="flex w-full max-w-page flex-col gap-8 border-2 border-dashed border-rule p-4"
 			>
 				<main>
-					<div class="card py-10 text-center">
-						<p class="text-xl font-medium tracking-tight text-ink">
-							⚠️ under construction.
+					<div class="card relative overflow-hidden py-10 text-center">
+						<Warning
+							aria-hidden="true"
+							width={200}
+							height={200}
+							class="pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 rotate-12 text-muted/40 [&_path]:stroke-current"
+						/>
+						<p class="relative text-xl font-medium tracking-tight text-ink">
+							กำลังสร้างมองข้ามไปก่อน
 						</p>
-						<p class="mt-1">new website is on the way!</p>
+						<p class="relative mt-1">หน้าเว็บไซต์ใหม่กำลังจะมา เร็วๆนี้!</p>
 					</div>
 				</main>
 
@@ -86,16 +92,15 @@ const socials = [
 							</a>
 						</div>
 						<div class="flex flex-row gap-2 text-neutral-500">
-							<a href="https://qwrtsdev.xyz" target="_blank"
+							<a href="https://qwrts.dev" target="_blank"
 								>พอร์ตโฟลิโอ</a
 							>
 							|
-							<a
-								href="https://blog.qwrtsdev.xyz/blogs"
-								target="_blank">บล็อก</a
+							<a href="https://blog.qwrts.dev" target="_blank"
+								>บล็อก</a
 							>
 							|
-							<a href="https://status.qwrtsdev.xyz" target="_blank"
+							<a href="https://status.qwrts.dev" target="_blank"
 								>สถานะ</a
 							>
 						</div>
